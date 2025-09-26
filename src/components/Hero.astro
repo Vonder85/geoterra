@@ -32,11 +32,11 @@ const {
         <p class="text-2xl font-semibold text-accent-500 mb-6">{subtitle}</p>
       )}
       {description && (
-        <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed" set:html={description}></p>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed mb-8" set:html={description}></p>
       )}
 
       {(primaryCta || secondaryCta) && (
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           {primaryCta && (
             <a
               href={primaryCta.href}

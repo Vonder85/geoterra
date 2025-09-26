@@ -1,0 +1,135 @@
+---
+export interface Props {
+  className?: string;
+  delay?: number;
+  duration?: number;
+  distance?: string;
+  direction?: 'up' | 'down' | 'left' | 'right';
+  children?: any;
+}
+
+const {
+  className = "",
+  delay = 0,
+  duration = 800,
+  distance = "30px",
+  direction = "up",
+  children
+} = Astro.props;
+
+// Générer un ID unique pour l'élément
+const elementId = `scroll-reveal-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div
+  id={elementId}
+  class={`scroll-reveal ${className}`}
+  data-delay={delay}
+  data-duration={duration}
+  data-distance={distance}
+  data-direction={direction}
+>
+  <slot />
+</div>
+
+<style>
+  .scroll-reveal {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+  }
+
+  .scroll-reveal[data-direction="up"] {
+    transform: translateY(var(--distance));
+  }
+
+  .scroll-reveal[data-direction="down"] {
+    transform: translateY(calc(-1 * var(--distance)));
+  }
+
+  .scroll-reveal[data-direction="left"] {
+    transform: translateX(var(--distance));
+  }
+
+  .scroll-reveal[data-direction="right"] {
+    transform: translateX(calc(-1 * var(--distance)));
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+</style>
+
+<script>
+  function initScrollReveal() {
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+
+    const elementInView = (el: Element, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+
+    const elementOutofView = (el: Element) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+      );
+    };
+
+    const displayScrollElement = (element: Element) => {
+      const htmlElement = element as HTMLElement;
+      const delay = parseInt(htmlElement.dataset.delay || '0');
+      const duration = parseInt(htmlElement.dataset.duration || '800');
+      const distance = htmlElement.dataset.distance || '30px';
+
+      // Définir les variables CSS
+      htmlElement.style.setProperty('--distance', distance);
+      htmlElement.style.transitionDuration = `${duration}ms`;
+
+      setTimeout(() => {
+        htmlElement.classList.add('revealed');
+      }, delay);
+    };
+
+    const hideScrollElement = (element: Element) => {
+      const htmlElement = element as HTMLElement;
+      htmlElement.classList.remove('revealed');
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        } else if (elementOutofView(el)) {
+          hideScrollElement(el);
+        }
+      });
+    };
+
+    // Initialiser au chargement
+    handleScrollAnimation();
+
+    // Écouter le scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+
+    // Observer pour les éléments ajoutés dynamiquement
+    const observer = new MutationObserver(() => {
+      handleScrollAnimation();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  // Attendre que le DOM soit chargé
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+  } else {
+    initScrollReveal();
+  }
+</script>
