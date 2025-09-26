@@ -109,7 +109,7 @@ import Footer from '../components/Footer.astro';
                       <option value="g2-avp">Étude G2 AVP - Avant-projet (définition fondations)</option>
                       <option value="g2-pro">Étude G2 PRO - Projet (dimensionnement fondations)</option>
                       <option value="g2-complete">Étude G2 complète (AVP + PRO)</option>
-                      <option value="g5">Diagnostic G5 - En cas de désordre/fissures</option>
+                      <option value="g5">Diagnostic G5 - En cas de désordre/fissures/surélévation</option>
                       <option value="g0">Mission G0 - Investigation simplifiée</option>
                       <option value="conseil">Conseil / Autre besoin</option>
                     </select>
@@ -186,7 +186,7 @@ import Footer from '../components/Footer.astro';
                     </select>
                   </div>
                 </div>
-                  
+
                 <div>
                   <label for="message" class="block text-sm font-medium text-neutral-700 mb-2">
                     Description du projet et informations complémentaires *
@@ -225,7 +225,9 @@ import Footer from '../components/Footer.astro';
                 <div class="text-center">
                   <p class="text-sm text-neutral-500">
                     📞 <strong>Vous préférez nous appeler ?</strong><br>
-                    <a href="tel:+330686082100" class="text-accent-600 hover:text-accent-700 font-medium">06 86 08 21 00</a>
+                    <a href="tel:+33686082100" class="text-accent-600 hover:text-accent-700 font-medium">06 86 08 21 00</a>
+                      {" "} | {""}
+                    <a href="tel:+33686156546" class="text-accent-600 hover:text-accent-700 font-medium">06 86 15 65 46</a>
                   </p>
                 </div>
               </form>
@@ -288,8 +290,12 @@ import Footer from '../components/Footer.astro';
                     <div>
                       <h4 class="font-medium text-neutral-800">Téléphone</h4>
                       <p class="text-neutral-600">
-                        <a href="tel:+330686082100" class="hover:text-accent-600 transition-colors">
+                        <a href="tel:+33686082100" class="hover:text-accent-600 transition-colors">
                             06 86 08 21 00
+                        </a>
+                          {" "} | {" "}
+                          <a href="tel:+33686156546" class="hover:text-accent-600 transition-colors">
+                              06 86 15 65 46
                         </a>
                       </p>
                     </div>

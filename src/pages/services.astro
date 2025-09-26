@@ -42,7 +42,7 @@ import Footer from '../components/Footer.astro';
             </h3>
             <div class="space-y-4 text-neutral-600">
               <p>
-                Pour sonder les profondeurs de votre sol, nous utilisons un matériel performant : une <strong>machine de forage PAGANI TG-63</strong>. Cet équipement nous permet de réaliser des pénétromètres dynamiques et statiques, et des tarières mécaniques.
+                Pour sonder les profondeurs de votre sol, nous utilisons un matériel performant : une <strong>machine de forage PAGANI TG-63</strong>. Cet équipement nous permet de réaliser des pénétromètres dynamiques et statiques.
               </p>
               <div class="bg-primary-50 p-6 rounded-lg">
                 <h4 class="font-semibold text-neutral-800 mb-3">Pour un projet standard G2 :</h4>
@@ -65,6 +65,12 @@ import Footer from '../components/Footer.astro';
                     </svg>
                     Sondages supplémentaires si nécessaires (sans frais)
                   </li>
+                    <li class="flex items-center">
+                    <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                        Cartographie l'anomalie afin d'adapter les fondations le plus précisément possible
+                  </li>
                 </ul>
               </div>
             </div>
@@ -73,11 +79,9 @@ import Footer from '../components/Footer.astro';
             <h4 class="text-xl font-bold text-neutral-800 mb-4">Équipements utilisés</h4>
             <div class="space-y-4">
               <div class="flex items-center">
-                <div class="bg-accent-100 p-2 rounded-full mr-4">
-                  <svg class="h-6 w-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                  </svg>
-                </div>
+                  <div class="bg-accent-100 p-2 rounded-full mr-4">
+                      <img class="h-6 w-6" src="/icons/machine.svg" alt="Machine PAGANI" />
+                  </div>
                 <div>
                   <div class="font-semibold text-neutral-800">Machine PAGANI TG-63</div>
                   <div class="text-sm text-neutral-600">Forage haute précision</div>
@@ -96,15 +100,22 @@ import Footer from '../components/Footer.astro';
               </div>
               <div class="flex items-center">
                 <div class="bg-accent-100 p-2 rounded-full mr-4">
-                  <svg class="h-6 w-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                  </svg>
+                  <img class="h-6 w-6" src="/icons/tariere-1.svg" alt="Tarière mécanique" />
                 </div>
                 <div>
-                  <div class="font-semibold text-neutral-800">Tarière mécanique</div>
+                  <div class="font-semibold text-neutral-800">Tarière thermique</div>
                   <div class="text-sm text-neutral-600">Prélèvement d'échantillons</div>
                 </div>
               </div>
+                <div class="flex items-center">
+                    <div class="bg-accent-100 p-2 rounded-full mr-4">
+                        <img class="h-6 w-6" src="/icons/laser.svg" alt="Laser de précision" />
+                    </div>
+                    <div>
+                        <div class="font-semibold text-neutral-800">Laser de précision</div>
+                        <div class="text-sm text-neutral-600">Nivellement laser</div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
@@ -243,12 +254,12 @@ import Footer from '../components/Footer.astro';
                 </div>
                 <p class="text-secondary-100">Diagnostic géotechnique</p>
                 <div class="mt-4 text-sm text-secondary-200">
-                  En cas de désordres ou contrôles
+                  En cas de surélévation, désordres, sinistres ou contrôles
                 </div>
               </div>
               <div class="p-8 lg:col-span-2">
                 <p class="text-neutral-600 mb-6">
-                  Cette mission est un diagnostic géotechnique ponctuel, souvent réalisé en cas de désordre sur une construction ou pour des contrôles spécifiques.
+                  Cette mission est un diagnostic géotechnique ponctuel, souvent réalisé en cas de désordre ou sinistre sur une construction ou pour des contrôles spécifiques.
                 </p>
                 <div class="space-y-3">
                   <div class="flex items-start">
