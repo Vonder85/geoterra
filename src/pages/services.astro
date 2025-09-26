@@ -2,337 +2,43 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Methodology from '../components/services/Methodology.astro';
+import MissionsSection from '../components/services/MissionsSection.astro';
+import DetailedMissionsSection from '../components/services/DetailedMissionsSection.astro';
 ---
 
 <Layout title="Nos services - GeoTerra" description="Découvrez tous nos services géotechniques : étude G1, G2, G5, missions d'investigation. Expertise et méthodologie rigoureuse pour tous vos projets." keywords="services géotechniques, étude G1, G2, G5, fondations, sondages">
   <Header />
 
   <main>
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h1 class="text-4xl lg:text-5xl font-bold text-neutral-800 mb-6">
-            Nos <span class="text-accent-500">services géotechniques</span>
-          </h1>
-          <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            De l'achat du terrain à la construction de votre maison, nous couvrons toutes les étapes de votre projet
-            avec une expertise géotechnique de pointe.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Hero
+      title="Nos <span class='text-accent-500'>services géotechniques</span>"
+      description="De l'achat du terrain à la construction de votre maison, nous couvrons toutes les étapes de votre projet avec une expertise géotechnique de pointe."
+    />
 
-    <!-- Méthodologie -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
-            Notre méthodologie d'étude : <span class="text-primary-500">précision et adaptation</span>
-          </h2>
-          <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-            Chez GEOTERRA, chaque étude de sol est menée avec une rigueur méthodologique par le géotechnicien qui rédige ensuite le rapport de sol, ce qui garantit la fiabilité de nos diagnostics et la pertinence de nos recommandations.
-          </p>
-        </div>
+    <Methodology />
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          <div>
-            <h3 class="text-2xl font-bold text-neutral-800 mb-6">
-              Des sondages précis avec notre machine de forage
-            </h3>
-            <div class="space-y-4 text-neutral-600">
-              <p>
-                Pour sonder les profondeurs de votre sol, nous utilisons un matériel performant : une <strong>machine de forage PAGANI TG-63</strong>. Cet équipement nous permet de réaliser des pénétromètres dynamiques et statiques.
-              </p>
-              <div class="bg-primary-50 p-6 rounded-lg">
-                <h4 class="font-semibold text-neutral-800 mb-3">Pour un projet standard G2 :</h4>
-                <ul class="space-y-2 text-sm">
-                  <li class="flex items-center">
-                    <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Minimum de 4 pénétromètres dynamiques
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Sondages jusqu'à 6 mètres de profondeur
-                  </li>
-                  <li class="flex items-center">
-                    <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Sondages supplémentaires si nécessaires (sans frais)
-                  </li>
-                    <li class="flex items-center">
-                    <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                        Cartographie l'anomalie afin d'adapter les fondations le plus précisément possible
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="bg-accent-50 p-8 rounded-lg">
-            <h4 class="text-xl font-bold text-neutral-800 mb-4">Équipements utilisés</h4>
-            <div class="space-y-4">
-              <div class="flex items-center">
-                  <div class="bg-accent-100 p-2 rounded-full mr-4">
-                      <img class="h-6 w-6" src="/icons/machine.svg" alt="Machine PAGANI" />
-                  </div>
-                <div>
-                  <div class="font-semibold text-neutral-800">Machine PAGANI TG-63</div>
-                  <div class="text-sm text-neutral-600">Forage haute précision</div>
-                </div>
-              </div>
-              <div class="flex items-center">
-                <div class="bg-accent-100 p-2 rounded-full mr-4">
-                  <svg class="h-6 w-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                  </svg>
-                </div>
-                <div>
-                  <div class="font-semibold text-neutral-800">Pénétromètres</div>
-                  <div class="text-sm text-neutral-600">Dynamiques et statiques</div>
-                </div>
-              </div>
-              <div class="flex items-center">
-                <div class="bg-accent-100 p-2 rounded-full mr-4">
-                  <img class="h-6 w-6" src="/icons/tariere-1.svg" alt="Tarière mécanique" />
-                </div>
-                <div>
-                  <div class="font-semibold text-neutral-800">Tarière thermique</div>
-                  <div class="text-sm text-neutral-600">Prélèvement d'échantillons</div>
-                </div>
-              </div>
-                <div class="flex items-center">
-                    <div class="bg-accent-100 p-2 rounded-full mr-4">
-                        <img class="h-6 w-6" src="/icons/laser.svg" alt="Laser de précision" />
-                    </div>
-                    <div>
-                        <div class="font-semibold text-neutral-800">Laser de précision</div>
-                        <div class="text-sm text-neutral-600">Nivellement laser</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
+    <MissionsSection />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div class="bg-white border border-primary-200 rounded-lg p-8">
-            <h4 class="text-xl font-bold text-neutral-800 mb-4">Tarière mécanique et analyse</h4>
-            <p class="text-neutral-600 mb-4">
-              Nous réalisons une tarière mécanique minimum de 2 à 3 mètres de profondeur pour prélever des échantillons de sol et les analyser en laboratoire (en cas de sol argileux).
-            </p>
-            <p class="text-sm text-neutral-500">
-              Les données sont croisées avec celles des pénétromètres pour une corrélation parfaite.
-            </p>
-          </div>
-          <div class="bg-white border border-primary-200 rounded-lg p-8">
-            <h4 class="text-xl font-bold text-neutral-800 mb-4">Sécurité de l'existant</h4>
-            <p class="text-neutral-600 mb-4">
-              Reconnaissances de fondation sur les constructions mitoyennes et nivellement laser des points de sondages pour la précision et la traçabilité.
-            </p>
-            <p class="text-sm text-neutral-500">
-              Adaptation des futures fondations pour éviter l'impact sur les bâtiments voisins.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nos missions -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
-            Nos missions géotechniques
-          </h2>
-          <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-            De l'achat du terrain à la construction, nous couvrons toutes les étapes de votre projet
-          </p>
-        </div>
-
-        <div class="space-y-12">
-          <!-- Mission G1 -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="lg:grid lg:grid-cols-3">
-              <div class="bg-primary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                <div class="flex items-center mb-4">
-                  <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-2xl font-bold">Étude G1</h3>
-                </div>
-                <p class="text-primary-100">Étude géotechnique préalable</p>
-                <div class="mt-4 text-sm text-primary-200">
-                  Indispensable lors de l'achat du terrain
-                </div>
-              </div>
-              <div class="p-8 lg:col-span-2">
-                <p class="text-neutral-600 mb-6">
-                  L'étude G1 est la première étape indispensable pour un projet de construction. Elle intervient lors de l'achat du terrain pour étudier la faisabilité de votre projet en fonction de la nature du sol et identifier les risques géotechniques.
-                </p>
-                <div class="space-y-3">
-                  <div class="flex items-start">
-                    <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Obligatoire dans le cadre de la loi ELAN pour les terrains classés en exposition moyenne ou forte au risque de retrait-gonflement des argiles</span>
-                  </div>
-                  <div class="flex items-start">
-                    <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Indispensable pour les projets de lotissement</span>
-                  </div>
-                  <div class="flex items-start">
-                    <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Identification des risques : terrain argileux, remblais, etc.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mission G2 -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="lg:grid lg:grid-cols-3">
-              <div class="bg-accent-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                <div class="flex items-center mb-4">
-                  <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-2xl font-bold">Étude G2</h3>
-                </div>
-                <p class="text-accent-100">Étude de conception</p>
-                <div class="mt-4 text-sm text-accent-200">
-                  AVP et PRO - Dimensionnement des fondations
-                </div>
-              </div>
-              <div class="p-8 lg:col-span-2">
-                <p class="text-neutral-600 mb-6">
-                  La mission G2 est scindée en deux phases pour définir et dimensionner précisément les fondations adaptées à votre terrain et votre projet défini.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div class="border border-accent-200 rounded-lg p-4">
-                    <h4 class="font-bold text-neutral-800 mb-2">G2 AVP (Avant-Projet)</h4>
-                    <p class="text-sm text-neutral-600">
-                      Définition du type de fondations et des options de construction adaptées à votre terrain. Réalisée au stade de l'avant-projet.
-                    </p>
-                  </div>
-                  <div class="border border-accent-200 rounded-lg p-4">
-                    <h4 class="font-bold text-neutral-800 mb-2">G2 PRO (Projet)</h4>
-                    <p class="text-sm text-neutral-600">
-                      Précise le dimensionnement des fondations. Rapport à transmettre au bureau d'études structure et au maçon.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mission G5 -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="lg:grid lg:grid-cols-3">
-              <div class="bg-secondary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                <div class="flex items-center mb-4">
-                  <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-2xl font-bold">Diagnostic G5</h3>
-                </div>
-                <p class="text-secondary-100">Diagnostic géotechnique</p>
-                <div class="mt-4 text-sm text-secondary-200">
-                  En cas de surélévation, désordres, sinistres ou contrôles
-                </div>
-              </div>
-              <div class="p-8 lg:col-span-2">
-                <p class="text-neutral-600 mb-6">
-                  Cette mission est un diagnostic géotechnique ponctuel, souvent réalisé en cas de désordre ou sinistre sur une construction ou pour des contrôles spécifiques.
-                </p>
-                <div class="space-y-3">
-                  <div class="flex items-start">
-                    <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Diagnostic en cas de fissures, affaissements</span>
-                  </div>
-                  <div class="flex items-start">
-                    <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Contrôle de fondations pour surélévation</span>
-                  </div>
-                  <div class="flex items-start">
-                    <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span class="text-sm text-neutral-600">Validation de projets de modification</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mission G0 -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="lg:grid lg:grid-cols-3">
-              <div class="bg-neutral-600 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                <div class="flex items-center mb-4">
-                  <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-2xl font-bold">Mission G0</h3>
-                </div>
-                <p class="text-neutral-300">Investigation géotechnique</p>
-                <div class="mt-4 text-sm text-neutral-400">
-                  Approche simplifiée sans ingénierie
-                </div>
-              </div>
-              <div class="p-8 lg:col-span-2">
-                <p class="text-neutral-600 mb-6">
-                  Investigation de terrain simplifiée sans rapport d'ingénierie. Nous remettons uniquement un rapport factuel des sondages effectués avec les résultats des investigations.
-                </p>
-                <div class="bg-neutral-50 p-4 rounded-lg">
-                  <p class="text-sm text-neutral-600">
-                    <strong>Idéal pour :</strong> Une approche économique pour obtenir des données de terrain avant une étude plus approfondie ou pour des projets nécessitant uniquement des informations factuelles sur le sol.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <DetailedMissionsSection />
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-accent-500 to-accent-600">
+    <section class="py-10 bg-gradient-to-r from-accent-500 to-accent-600">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
-          Besoin d'une étude géotechnique ?
+          Prêt à démarrer votre projet ?
         </h2>
-        <p class="text-xl text-accent-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Contactez-nous pour obtenir un devis personnalisé et démarrer votre projet sur des bases solides.
+        <p class="text-xl text-accent-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Contactez GEOTERRA dès aujourd'hui pour obtenir votre devis personnalisé sous 48h maximum.
+          Nos experts vous accompagnent de A à Z dans votre étude géotechnique.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/contact" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-100 transition-colors shadow-lg">
-            Demander un devis
+            Obtenir un devis gratuit
           </a>
           <a href="/entreprise" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors">
-            En savoir plus
+            Découvrir l'entreprise
           </a>
         </div>
       </div>

@@ -1,0 +1,97 @@
+---
+import MissionCard from './MissionCard.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  missions?: Array<{
+    title: string;
+    subtitle?: string;
+    description: string;
+    features: string[];
+    icon: string;
+    colorClass: 'primary' | 'accent' | 'secondary' | 'neutral';
+  }>;
+  ctaText?: string;
+  ctaLink?: string;
+  className?: string;
+}
+
+const {
+  title = "Nos missions géotechniques",
+  description = "De l'achat du terrain à la construction de votre maison, nous couvrons toutes les étapes de votre projet",
+  missions = [
+    {
+      title: "Étude G1",
+      subtitle: "",
+      description: "Étude préalable lors de l'achat du terrain. Obligatoire selon la loi ELAN.",
+      features: [
+        "Faisabilité du projet",
+        "Identification des risques"
+      ],
+      icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+      colorClass: "primary"
+    },
+    {
+      title: "Étude G2",
+      subtitle: "",
+      description: "Conception et dimensionnement des fondations adaptées à votre projet.",
+      features: [
+        "G2 AVP (Avant-Projet)",
+        "G2 PRO (Projet)"
+      ],
+      icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+      colorClass: "accent"
+    },
+    {
+      title: "Diagnostic G5",
+      subtitle: "",
+      description: "Diagnostic ponctuel en cas de désordre ou pour contrôles spécifiques.",
+      features: [
+        "Fissures, affaissements",
+        "Contrôle fondations"
+      ],
+      icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+      colorClass: "secondary"
+    },
+    {
+      title: "Mission G0",
+      subtitle: "",
+      description: "Investigation simplifiée sans rapport d'ingénierie.",
+      features: [
+        "Rapport factuel",
+        "Approche économique"
+      ],
+      icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+      colorClass: "neutral"
+    }
+  ],
+  className = "py-6 bg-gray-50"
+} = Astro.props;
+---
+
+<section class={className}>
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
+        {title}
+      </h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        {description}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {missions.map((mission) => (
+        <MissionCard
+          title={mission.title}
+          subtitle={mission.subtitle ?? ""}
+          description={mission.description}
+          features={mission.features}
+          icon={mission.icon}
+          colorClass={mission.colorClass}
+        />
+      ))}
+    </div>
+  </div>
+</section>

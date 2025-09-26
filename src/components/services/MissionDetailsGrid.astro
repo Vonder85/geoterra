@@ -1,0 +1,44 @@
+---
+import MissionDetails from './MissionDetails.astro';
+
+export interface Props {
+  missions?: Array<{
+    title: string;
+    subtitle?: string;
+    description: string;
+    checklist?: string[];
+    colorClass?: 'primary' | 'accent' | 'secondary' | 'neutral';
+  }>;
+  className?: string;
+  gridCols?: 'md:grid-cols-2' | 'md:grid-cols-3' | 'md:grid-cols-4';
+}
+
+const {
+  missions = [
+    {
+      title: "Tarière mécanique et analyse",
+      description: "Nous réalisons une tarière mécanique minimum de 2 à 3 mètres de profondeur pour prélever des échantillons de sol et les analyser en laboratoire (en cas de sol argileux).<br><br><small class='text-neutral-500'>Les données sont croisées avec celles des pénétromètres pour une corrélation parfaite.</small>",
+      colorClass: "accent"
+    },
+    {
+      title: "Sécurité de l'existant",
+      description: "Reconnaissances de fondation sur les constructions mitoyennes et nivellement laser des points de sondages pour la précision et la traçabilité.<br><br><small class='text-neutral-500'>Adaptation des futures fondations pour éviter l'impact sur les bâtiments voisins.</small>",
+      colorClass: "primary"
+    }
+  ],
+  className = "grid grid-cols-1 gap-8 mb-16",
+  gridCols = "md:grid-cols-2"
+} = Astro.props;
+---
+
+<div class={`${className} ${gridCols}`}>
+  {missions.map((mission) => (
+    <MissionDetails
+      title={mission.title}
+      subtitle={mission.subtitle}
+      description={mission.description}
+      checklist={mission.checklist}
+      colorClass={mission.colorClass}
+    />
+  ))}
+</div>

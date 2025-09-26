@@ -2,26 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import EngagementCard from '../components/contact/EngagementCard.astro';
 ---
 
 <Layout title="L'entreprise - GeoTerra" description="Découvrez GeoTerra, bureau d'étude géotechnique fondé par des ingénieurs passionnés. Notre expertise et notre approche personnalisée garantissent la réussite de vos projets de construction." keywords="bureau d'étude géotechnique, entreprise, équipe, expertise, ingénieurs">
   <Header />
 
   <main>
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h1 class="text-4xl lg:text-5xl font-bold text-neutral-800 mb-6">
-            L'entreprise <span class="text-accent-500">GEOTERRA</span>
-          </h1>
-          <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Un bureau d'étude géotechnique de confiance, alliant expertise technique et proximité client
-            pour accompagner tous vos projets de construction.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Hero
+      title="L'entreprise <span class='text-accent-500'>GEOTERRA</span>"
+      description="Un bureau d'étude géotechnique de confiance, alliant expertise technique et proximité client pour accompagner tous vos projets de construction."
+    />
 
     <!-- Qui sommes-nous -->
     <section class="py-20 bg-white">
@@ -44,39 +36,24 @@ import Footer from '../components/Footer.astro';
             <div class="bg-gray-50 rounded-lg p-8">
               <h3 class="text-2xl font-bold text-neutral-800 mb-6">Nos engagements</h3>
               <div class="space-y-4">
-                <div class="flex items-center">
-                  <div class="bg-primary-100 p-2 rounded-full mr-4">
-                    <svg class="h-5 w-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="font-bold text-secondary-800">Devis sous 48h</div>
-                    <div class="text-sm text-neutral-600">Réactivité garantie</div>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div class="bg-primary-100 p-2 rounded-full mr-4">
-                    <svg class="h-5 w-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="font-bold text-secondary-800">Rapport sous 10 jours</div>
-                    <div class="text-sm text-neutral-600">Après intervention sur site</div>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div class="bg-primary-100 p-2 rounded-full mr-4">
-                    <svg class="h-5 w-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="font-bold text-secondary-800">Intervention sous 15 jours</div>
-                    <div class="text-sm text-neutral-600">Après validation du devis</div>
-                  </div>
-                </div>
+                <EngagementCard
+                  title="Devis sous 48h"
+                  description="Réactivité garantie"
+                  icon="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  colorClass="primary"
+                />
+                <EngagementCard
+                  title="Rapport sous 10 jours"
+                  description="Après intervention sur site"
+                  icon="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  colorClass="primary"
+                />
+                <EngagementCard
+                  title="Intervention sous 15 jours"
+                  description="Après validation du devis"
+                  icon="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  colorClass="primary"
+                />
               </div>
             </div>
           </div>

@@ -1,0 +1,78 @@
+---
+const faqItems = [
+  {
+    question: "Quelle est la différence entre une étude G1 et G2 ?",
+    answer: "L'<strong>étude G1</strong> est réalisée lors de l'achat du terrain pour identifier les risques géotechniques et la faisabilité du projet. L'<strong>étude G2</strong> intervient avec un projet défini pour dimensionner précisément les fondations. Elle se divise en G2 AVP (avant-projet) et G2 PRO (projet)."
+  },
+  {
+    question: "L'étude géotechnique est-elle obligatoire ?",
+    answer: "L'étude G1 est <strong>obligatoire à la vente du terrain</strong> selon la loi ELAN si le terrain est classé en exposition moyenne ou forte au risque de retrait-gonflement des argiles. L'étude G2 est fortement recommandée pour dimensionner les fondations et éviter des désordres coûteux."
+  },
+  {
+    question: "Combien de sondages réalisez-vous pour une maison ?",
+    answer: "Pour un projet standard G2, nous réalisons <strong>minimum 4 pénétromètres dynamiques</strong> jusqu'à 6 mètres de profondeur, plus une <strong>tarière mécanique</strong> de 2-3 mètres. En cas de variation du sol, nous réalisons des sondages supplémentaires <strong>sans frais additionnels</strong>."
+  },
+  {
+    question: "Que se passe-t-il si vous détectez un sol argileux ?",
+    answer: "En cas de sol argileux, nous prélevons des échantillons avec la tarière mécanique pour <strong>analyse en laboratoire</strong>. Nous croisons ensuite ces données avec les pénétromètres pour vous proposer les fondations adaptées (semelles, longrines, pieux selon les cas)."
+  },
+  {
+    question: "Intervenez-vous vraiment sous 15 jours ?",
+    answer: "Oui, c'est notre <strong>engagement ferme</strong> ! Grâce à notre implantation locale en Vendée et Loire-Atlantique, nous pouvons intervenir rapidement. Notre planning est organisé pour respecter ce délai de 15 jours maximum après validation de votre devis."
+  }
+];
+---
+
+<section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
+                Questions fréquentes
+            </h2>
+            <p class="text-xl text-neutral-600">
+                Les réponses aux questions les plus courantes sur nos services géotechniques
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            {faqItems.map((item) => (
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none" data-faq-toggle>
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-neutral-800">
+                                {item.question}
+                            </h3>
+                            <svg class="h-5 w-5 text-neutral-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-neutral-600" set:html={item.answer}></p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqButtons = document.querySelectorAll('[data-faq-toggle]');
+
+        faqButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('svg');
+
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    });
+</script>

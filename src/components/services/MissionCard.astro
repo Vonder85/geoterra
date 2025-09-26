@@ -1,0 +1,56 @@
+---
+export interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  icon: string;
+  colorClass: 'primary' | 'accent' | 'secondary' | 'neutral';
+  className?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  features,
+  icon,
+  colorClass,
+  className = ""
+} = Astro.props;
+
+const colorClasses = {
+  primary: 'bg-primary-100 text-primary-500',
+  accent: 'bg-accent-100 text-accent-500',
+  secondary: 'bg-secondary-100 text-secondary-500',
+  neutral: 'bg-neutral-200 text-neutral-600'
+};
+
+const textColorClasses = {
+  primary: 'text-primary-600',
+  accent: 'text-accent-600',
+  secondary: 'text-secondary-600',
+  neutral: 'text-neutral-600'
+};
+
+const iconColorClass = colorClasses[colorClass];
+const textColorClass = textColorClasses[colorClass];
+---
+
+<div class={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow ${className}`}>
+  <div class={`${iconColorClass.split(' ')[0]} w-16 h-16 rounded-full flex items-center justify-center mb-4`}>
+    <svg class={`h-8 w-8 ${iconColorClass.split(' ')[1]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}/>
+    </svg>
+  </div>
+  <h3 class="text-xl font-bold text-neutral-800 mb-2">{title}</h3>
+  <p class="text-sm text-neutral-600 mb-4">{description}</p>
+  <div class={`text-xs ${textColorClass} font-medium space-y-1`}>
+    {features.map((feature) => (
+      <div>• {feature}</div>
+    ))}
+  </div>
+  {subtitle && (
+    <div class="mt-3 text-xs text-neutral-500 italic">{subtitle}</div>
+  )}
+</div>

@@ -1,0 +1,31 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  colorClass?: 'primary' | 'accent' | 'secondary' | 'neutral';
+}
+
+const { title, description, icon, colorClass = 'primary' } = Astro.props;
+
+const colorClasses = {
+  primary: 'bg-primary-100 text-primary-500',
+  accent: 'bg-accent-100 text-accent-500',
+  secondary: 'bg-secondary-100 text-secondary-500',
+  neutral: 'bg-neutral-200 text-neutral-600'
+};
+
+const iconColorClass = colorClasses[colorClass];
+---
+
+<div class="flex items-center">
+  <div class={`${iconColorClass.split(' ')[0]} p-3 rounded-full mr-4`}>
+    <svg class={`h-6 w-6 ${iconColorClass.split(' ')[1]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}/>
+    </svg>
+  </div>
+  <div>
+    <div class="font-bold text-neutral-800">{title}</div>
+    <div class="text-sm text-neutral-600">{description}</div>
+  </div>
+</div>
