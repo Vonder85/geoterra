@@ -60,7 +60,7 @@ const {
       colorClass: "accent"
     }
   ],
-  className = "py-10 bg-white"
+  className = "py-20 bg-neutral-100"
 } = Astro.props;
 ---
 
@@ -76,20 +76,20 @@ const {
           </span>
         )}
       </h2>
-      <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+      <p class="text-xl text-neutral-700 max-w-4xl mx-auto leading-relaxed">
         Chez GEOTERRA, chaque étude de sol est menée avec une rigueur méthodologique par le géotechnicien qui rédige ensuite le rapport de sol, ce qui garantit la fiabilité de nos diagnostics et la pertinence de nos recommandations.
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
       <div>
-        <h3 class="text-2xl font-bold text-neutral-800 mb-6">
+        <h3 class="text-2xl font-bold text-neutral-900 mb-6">
           {subtitle}
         </h3>
-        <div class="space-y-4 text-neutral-600">
+        <div class="space-y-4 text-neutral-700">
           <p>{description}</p>
-          <div class="bg-primary-50 p-6 rounded-lg">
-            <h4 class="font-semibold text-neutral-800 mb-3">Pour un projet standard G2 :</h4>
+          <div class="bg-primary-200 p-6 rounded-lg border border-primary-300">
+            <h4 class="font-semibold text-neutral-900 mb-3">Pour un projet standard G2 :</h4>
             <ul class="space-y-2 text-sm">
               <li class="flex items-center">
                 <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,21 +111,21 @@ const {
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div class="bg-white border border-primary-200 rounded-lg p-8">
-        <h4 class="text-xl font-bold text-neutral-800 mb-4">Tarière mécanique et analyse</h4>
-        <p class="text-neutral-600 mb-4">
+      <div class="bg-primary-200 border border-primary-300 rounded-lg p-8">
+        <h4 class="text-xl font-bold text-neutral-900 mb-4">Tarière mécanique et analyse</h4>
+        <p class="text-neutral-800 mb-4">
           Nous réalisons une tarière mécanique minimum de 2 à 3 mètres de profondeur pour prélever des échantillons de sol et les analyser en laboratoire (en cas de sol argileux).
         </p>
-        <p class="text-sm text-neutral-500">
+        <p class="text-sm text-neutral-700">
           Les données sont croisées avec celles des pénétromètres pour une corrélation parfaite.
         </p>
       </div>
-      <div class="bg-white border border-primary-200 rounded-lg p-8">
-        <h4 class="text-xl font-bold text-neutral-800 mb-4">Sécurité de l'existant</h4>
-        <p class="text-neutral-600 mb-4">
+      <div class="bg-accent-200 border border-accent-300 rounded-lg p-8">
+        <h4 class="text-xl font-bold text-neutral-900 mb-4">Sécurité de l'existant</h4>
+        <p class="text-neutral-800 mb-4">
           Reconnaissances de fondation sur les constructions mitoyennes et nivellement laser des points de sondages pour la précision et la traçabilité.
         </p>
-        <p class="text-sm text-neutral-500">
+        <p class="text-sm text-neutral-700">
           Adaptation des futures fondations pour éviter l'impact sur les bâtiments voisins.
         </p>
       </div>

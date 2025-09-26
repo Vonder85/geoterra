@@ -20,10 +20,10 @@ const {
 } = Astro.props;
 
 const colorClasses = {
-  primary: 'bg-primary-100 text-primary-500',
-  accent: 'bg-accent-100 text-accent-500',
-  secondary: 'bg-secondary-100 text-secondary-500',
-  neutral: 'bg-neutral-200 text-neutral-600'
+  primary: 'bg-primary-200 text-primary-600',
+  accent: 'bg-accent-200 text-accent-600',
+  secondary: 'bg-secondary-200 text-secondary-600',
+  neutral: 'bg-neutral-300 text-neutral-700'
 };
 
 const textColorClasses = {
@@ -37,7 +37,7 @@ const iconColorClass = colorClasses[colorClass];
 const textColorClass = textColorClasses[colorClass];
 ---
 
-<div class={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow ${className}`}>
+<div class={`bg-neutral-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-neutral-200 ${className}`}>
   <div class={`${iconColorClass.split(' ')[0]} w-16 h-16 rounded-full flex items-center justify-center mb-4`}>
     <svg class={`h-8 w-8 ${iconColorClass.split(' ')[1]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}/>

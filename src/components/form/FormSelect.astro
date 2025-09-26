@@ -19,7 +19,7 @@ const {
   className = ''
 } = Astro.props;
 
-const baseClasses = "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors";
+const baseClasses = "w-full px-4 py-3 border border-neutral-300 bg-neutral-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white transition-colors";
 const finalClasses = className ? `${baseClasses} ${className}` : baseClasses;
 ---
 
