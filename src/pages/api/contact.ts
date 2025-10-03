@@ -8,8 +8,6 @@ export const POST: APIRoute = async ({ request }) => {
     let data;
     const contentType = request.headers.get('content-type') || '';
 
-    console.log('Content-Type reçu:', contentType);
-
     // Support pour JSON et FormData
     if (contentType.includes('application/json')) {
       const text = await request.text();
