@@ -5,7 +5,6 @@ import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   output: "hybrid",
-  adapter: vercel(),
   integrations: [tailwind(), sitemap()],
   site: "https://geoterra.fr",
   compilerOptions: {
