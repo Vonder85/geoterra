@@ -1,0 +1,76 @@
+---
+import ScrollReveal from '../ScrollReveal.astro';
+import EquipmentItem from '../services/EquipmentItem.astro';
+---
+
+<section class="py-20 bg-primary-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ScrollReveal delay={200}>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
+          Une expertise <span class="text-primary-500">reconnue</span>
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          Vincent MENUET et Maxime ROBIN forment une équipe complémentaire, alliant une expertise solide à une maîtrise parfaite des sols de Vendée et Loire-Atlantique.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+      <ScrollReveal delay={400} direction="left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg text-center shadow-md border border-accent-200">
+            <div class="w-20 h-20 bg-accent-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span class="text-2xl font-bold text-accent-600">VM</span>
+            </div>
+            <h3 class="text-lg font-bold text-neutral-800 mb-2">Vincent MENUET</h3>
+            <p class="text-accent-600 font-medium mb-2">Ingénieur géotechnicien</p>
+            <p class="text-sm text-neutral-600">25 ans d'expérience en Vendée et Loire-Atlantique</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg text-center shadow-md border border-primary-200">
+            <div class="w-20 h-20 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span class="text-2xl font-bold text-primary-600">MR</span>
+            </div>
+            <h3 class="text-lg font-bold text-neutral-800 mb-2">Maxime ROBIN</h3>
+            <p class="text-primary-600 font-medium mb-2">Géotechnicien spécialisé</p>
+            <p class="text-sm text-neutral-600">5 ans d'expérience terrain et rédaction</p>
+          </div>
+        </div>
+      </ScrollReveal>
+      <ScrollReveal delay={600} direction="right">
+        <div>
+          <h3 class="text-2xl font-bold text-neutral-800 mb-6">Notre approche technique</h3>
+          <div class="space-y-4">
+            <EquipmentItem
+              title="Machine PAGANI TG-63"
+              description="Forage haute précision"
+              iconSrc="/icons/machine.svg"
+              iconAlt="Machine PAGANI"
+              colorClass="accent"
+            />
+            <EquipmentItem
+              title="Pénétromètres"
+              description="Dynamiques et statiques"
+              icon="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              colorClass="accent"
+            />
+            <EquipmentItem
+              title="Tarière thermique"
+              description="Prélèvement d'échantillons"
+              iconSrc="/icons/tariere-1.svg"
+              iconAlt="Tarière thermique"
+              colorClass="accent"
+            />
+            <EquipmentItem
+              title="Laser de précision"
+              description="Nivellement laser"
+              iconSrc="/icons/laser.svg"
+              iconAlt="Laser de précision"
+              colorClass="accent"
+            />
+          </div>
+        </div>
+      </ScrollReveal>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import ScrollReveal from '../ScrollReveal.astro';
+---
+
+<section class="py-20 bg-gradient-to-r from-accent-500 to-accent-600">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <ScrollReveal delay={200}>
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Vous souhaitez en savoir plus ou obtenir un devis ?
+      </h2>
+      <p class="text-xl text-accent-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Chez GEOTERRA, nous ne nous contentons pas de réaliser des études : nous vous offrons un service fiable, rapide et de proximité, pour que la phase de construction démarre sur des bases solides.
+      </p>
+    </ScrollReveal>
+    <ScrollReveal delay={400}>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-100 transition-colors shadow-lg">
+          Contactez-nous dès aujourd'hui !
+        </a>
+        <a href="/entreprise" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors">
+          Découvrir l'entreprise
+        </a>
+      </div>
+    </ScrollReveal>
+  </div>
+</section>
