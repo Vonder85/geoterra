@@ -1,18 +1,27 @@
 ---
-import FormInput from '../form/FormInput.astro';
-import FormSelect from '../form/FormSelect.astro';
-import FormTextarea from '../form/FormTextarea.astro';
-import FormCheckbox from '../form/FormCheckbox.astro';
+import FormInput from "../form/FormInput.astro";
+import FormSelect from "../form/FormSelect.astro";
+import FormTextarea from "../form/FormTextarea.astro";
+import FormCheckbox from "../form/FormCheckbox.astro";
 
 // Options pour les selects
 const serviceTypeOptions = [
   { value: "g1", label: "Étude G1 - Étude préalable (achat terrain)" },
-  { value: "g2-avp", label: "Étude G2 AVP - Avant-projet (définition fondations)" },
-  { value: "g2-pro", label: "Étude G2 PRO - Projet (dimensionnement fondations)" },
+  {
+    value: "g2-avp",
+    label: "Étude G2 AVP - Avant-projet (définition fondations)",
+  },
+  {
+    value: "g2-pro",
+    label: "Étude G2 PRO - Projet (dimensionnement fondations)",
+  },
   { value: "g2-complete", label: "Étude G2 complète (AVP + PRO)" },
-  { value: "g5", label: "Diagnostic G5 - En cas de désordre/fissures/surélévation" },
+  {
+    value: "g5",
+    label: "Diagnostic G5 - En cas de désordre/fissures/surélévation",
+  },
   { value: "g0", label: "Mission G0 - Investigation simplifiée" },
-  { value: "conseil", label: "Conseil / Autre besoin" }
+  { value: "conseil", label: "Conseil / Autre besoin" },
 ];
 
 const projectTypeOptions = [
@@ -22,7 +31,7 @@ const projectTypeOptions = [
   { value: "piscine", label: "Piscine" },
   { value: "garage", label: "Garage / Annexe" },
   { value: "renovation", label: "Rénovation / Surélévation" },
-  { value: "autre", label: "Autre projet" }
+  { value: "autre", label: "Autre projet" },
 ];
 
 const surfaceOptions = [
@@ -31,169 +40,162 @@ const surfaceOptions = [
   { value: "150-200", label: "150 à 200 m²" },
   { value: "200-300", label: "200 à 300 m²" },
   { value: "plus-300", label: "Plus de 300 m²" },
-  { value: "non-defini", label: "Non défini" }
+  { value: "non-defini", label: "Non défini" },
 ];
 
 const timelineOptions = [
   { value: "urgent", label: "Urgent (sous 15 jours)" },
   { value: "1-mois", label: "Dans le mois" },
   { value: "2-3-mois", label: "Dans les 2-3 mois" },
-  { value: "flexible", label: "Flexible" }
+  { value: "flexible", label: "Flexible" },
 ];
 ---
 
-<div class="bg-white rounded-lg shadow-xl p-8">
-  <h2 class="text-2xl font-bold text-neutral-800 mb-6">
+<div class='bg-white rounded-lg shadow-xl p-8'>
+  <h2 class='text-2xl font-bold text-neutral-800 mb-6'>
     Demande de devis gratuit
   </h2>
-  <p class="text-neutral-600 mb-8">
-    Remplissez ce formulaire et nous vous recontacterons sous 48h maximum pour étudier votre projet et vous proposer un devis personnalisé.
+  <p class='text-neutral-600 mb-8'>
+    Remplissez ce formulaire et nous vous recontacterons sous 48h maximum pour
+    étudier votre projet et vous proposer un devis personnalisé.
   </p>
 
-  <form id="contact-form" class="space-y-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <form id='contact-form' class='space-y-6'>
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+      <FormInput id='firstName' name='firstName' label='Prénom' required />
+      <FormInput id='lastName' name='lastName' label='Nom' required />
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+      <FormInput type='email' id='email' name='email' label='Email' required />
       <FormInput
-        id="firstName"
-        name="firstName"
-        label="Prénom"
-        required
-      />
-      <FormInput
-        id="lastName"
-        name="lastName"
-        label="Nom"
+        type='tel'
+        id='phone'
+        name='phone'
+        label='Téléphone'
         required
       />
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <FormInput
-        type="email"
-        id="email"
-        name="email"
-        label="Email"
-        required
-      />
-      <FormInput
-        type="tel"
-        id="phone"
-        name="phone"
-        label="Téléphone"
-        required
-      />
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <FormSelect
-        id="serviceType"
-        name="serviceType"
+        id='serviceType'
+        name='serviceType'
         label="Type d'étude géotechnique"
         options={serviceTypeOptions}
-        placeholder="Sélectionnez votre besoin"
+        placeholder='Sélectionnez votre besoin'
         required
       />
       <FormSelect
-        id="projectType"
-        name="projectType"
-        label="Type de projet"
+        id='projectType'
+        name='projectType'
+        label='Type de projet'
         options={projectTypeOptions}
-        placeholder="Sélectionnez un type"
+        placeholder='Sélectionnez un type'
         required
       />
     </div>
 
     <FormInput
-      id="location"
-      name="location"
-      label="Localisation du projet"
-      placeholder="Ville, département (Vendée 85 ou Loire-Atlantique 44)"
+      id='location'
+      name='location'
+      label='Localisation du projet'
+      placeholder='Ville, département (Vendée 85 ou Loire-Atlantique 44)'
       required
     />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <FormSelect
-        id="surface"
-        name="surface"
-        label="Surface approximative du projet"
+        id='surface'
+        name='surface'
+        label='Surface approximative du projet'
         options={surfaceOptions}
-        placeholder="Sélectionnez une surface"
+        placeholder='Sélectionnez une surface'
       />
       <FormSelect
-        id="timeline"
-        name="timeline"
-        label="Échéances souhaitées"
+        id='timeline'
+        name='timeline'
+        label='Échéances souhaitées'
         options={timelineOptions}
-        placeholder="Sélectionnez une échéance"
+        placeholder='Sélectionnez une échéance'
       />
     </div>
 
     <FormTextarea
-      id="message"
-      name="message"
-      label="Description du projet et informations complémentaires"
-      placeholder="Décrivez votre projet : type de construction, informations sur le terrain, contraintes particulières, questions spécifiques..."
+      id='message'
+      name='message'
+      label='Description du projet et informations complémentaires'
+      placeholder='Décrivez votre projet : type de construction, informations sur le terrain, contraintes particulières, questions spécifiques...'
       rows={5}
       required
     />
 
     <FormCheckbox
-      id="consent"
-      name="consent"
-      label="J'accepte d'être contacté par GEOTERRA concernant ma demande et confirme avoir lu la <a href='#' class='text-accent-600 hover:text-accent-700'>politique de confidentialité</a>."
+      id='consent'
+      name='consent'
+      label="J'accepte d'être contacté par GEOTERRA concernant ma demande d'informations."
       required
     />
 
-    <div id="form-message" class="hidden p-4 rounded-lg"></div>
+    <div id='form-message' class='hidden p-4 rounded-lg'></div>
 
     <button
-      type="submit"
-      id="submit-button"
-      class="w-full bg-accent-500 text-white py-4 px-8 rounded-lg font-semibold hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+      type='submit'
+      id='submit-button'
+      class='w-full bg-accent-500 text-white py-4 px-8 rounded-lg font-semibold hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed'
     >
       Envoyer ma demande de devis
     </button>
 
-    <div class="text-center">
-      <p class="text-sm text-neutral-500">
-        📞 <strong>Vous préférez nous appeler ?</strong><br>
-        <a href="tel:+33686082100" class="text-accent-600 hover:text-accent-700 font-medium">06 86 08 21 00</a>
-          {" "} | {""}
-        <a href="tel:+33686156546" class="text-accent-600 hover:text-accent-700 font-medium">06 86 15 65 46</a>
+    <div class='text-center'>
+      <p class='text-sm text-neutral-500'>
+        📞 <strong>Vous préférez nous appeler ?</strong><br />
+        <a
+          href='tel:+33686082100'
+          class='text-accent-600 hover:text-accent-700 font-medium'
+          >06 86 08 21 00</a
+        >
+        {" "} | {""}
+        <a
+          href='tel:+33686156546'
+          class='text-accent-600 hover:text-accent-700 font-medium'
+          >06 86 15 65 46</a
+        >
       </p>
     </div>
   </form>
 </div>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const submitButton = document.getElementById('submit-button');
-    const formMessage = document.getElementById('form-message');
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const submitButton = document.getElementById("submit-button");
+    const formMessage = document.getElementById("form-message");
 
     if (!form) return;
 
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
 
       // Désactiver le bouton pendant l'envoi
       submitButton.disabled = true;
-      submitButton.textContent = 'Envoi en cours...';
+      submitButton.textContent = "Envoi en cours...";
 
       // Masquer les messages précédents
-      formMessage.classList.add('hidden');
+      formMessage.classList.add("hidden");
 
       try {
         // Récupérer les données du formulaire
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
 
-        console.log('Envoi des données:', data);
+        console.log("Envoi des données:", data);
 
         // Envoyer la requête à l'API
-        const response = await fetch('/api/contact', {
-          method: 'POST',
+        const response = await fetch("/api/contact", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(data),
         });
@@ -202,28 +204,39 @@ const timelineOptions = [
 
         if (response.ok) {
           // Afficher le message de succès
-          formMessage.textContent = '✅ Votre demande a été envoyée avec succès ! Nous vous recontacterons sous 48h.';
-          formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
-          formMessage.classList.add('bg-green-100', 'text-green-700');
+          formMessage.textContent =
+            "✅ Votre demande a été envoyée avec succès ! Nous vous recontacterons sous 48h.";
+          formMessage.classList.remove("hidden", "bg-red-100", "text-red-700");
+          formMessage.classList.add("bg-green-100", "text-green-700");
 
           // Réinitialiser le formulaire
           form.reset();
         } else {
           // Afficher le message d'erreur
-          formMessage.textContent = '❌ ' + (result.error || 'Une erreur est survenue');
-          formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-          formMessage.classList.add('bg-red-100', 'text-red-700');
+          formMessage.textContent =
+            "❌ " + (result.error || "Une erreur est survenue");
+          formMessage.classList.remove(
+            "hidden",
+            "bg-green-100",
+            "text-green-700"
+          );
+          formMessage.classList.add("bg-red-100", "text-red-700");
         }
       } catch (error) {
         // Afficher le message d'erreur
-        formMessage.textContent = '❌ Une erreur est survenue lors de l\'envoi. Veuillez réessayer.';
-        formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-        formMessage.classList.add('bg-red-100', 'text-red-700');
-        console.error('Erreur:', error);
+        formMessage.textContent =
+          "❌ Une erreur est survenue lors de l'envoi. Veuillez réessayer.";
+        formMessage.classList.remove(
+          "hidden",
+          "bg-green-100",
+          "text-green-700"
+        );
+        formMessage.classList.add("bg-red-100", "text-red-700");
+        console.error("Erreur:", error);
       } finally {
         // Réactiver le bouton
         submitButton.disabled = false;
-        submitButton.textContent = 'Envoyer ma demande de devis';
+        submitButton.textContent = "Envoyer ma demande de devis";
       }
     });
   });
