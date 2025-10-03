@@ -1,14 +1,13 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/serverless';
+import { defineConfig } from "astro/config";
+import vercel from "@astrojs/vercel";
+import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  output: "hybrid",
-  integrations: [tailwind(), sitemap()],
+  output: "server",
   site: "https://geoterra.fr",
-  compilerOptions: {
-    strict: true,
-  },
-  adapter: vercel(),
+  integrations: [tailwind(), sitemap()],
+  adapter: vercel({
+    runtime: "nodejs20.x",
+  }),
 });
