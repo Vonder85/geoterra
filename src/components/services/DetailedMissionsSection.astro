@@ -1,5 +1,6 @@
 ---
 import MissionDetailsGrid from './MissionDetailsGrid.astro';
+import ScrollReveal from '../ScrollReveal.astro';
 
 export interface Props {
   className?: string;
@@ -11,12 +12,13 @@ const { className = "py-20 bg-white" } = Astro.props;
 ---
 
 <!-- Nos missions -->
-<section class="py-10 bg-gray-50">
+<section class="py-10 bg-primary-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="space-y-12">
             <!-- Mission G1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <ScrollReveal delay={200}>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="lg:grid lg:grid-cols-3">
                     <div class="bg-primary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
                         <div class="flex items-center mb-4">
@@ -58,10 +60,12 @@ const { className = "py-20 bg-white" } = Astro.props;
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            </ScrollReveal>
 
             <!-- Mission G2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <ScrollReveal delay={300}>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="lg:grid lg:grid-cols-3">
                     <div class="bg-accent-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
                         <div class="flex items-center mb-4">
@@ -97,10 +101,12 @@ const { className = "py-20 bg-white" } = Astro.props;
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            </ScrollReveal>
 
             <!-- Mission G5 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <ScrollReveal delay={400}>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="lg:grid lg:grid-cols-3">
                     <div class="bg-secondary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
                         <div class="flex items-center mb-4">
@@ -142,10 +148,12 @@ const { className = "py-20 bg-white" } = Astro.props;
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            </ScrollReveal>
 
             <!-- Mission G0 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <ScrollReveal delay={500}>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="lg:grid lg:grid-cols-3">
                     <div class="bg-neutral-600 p-8 text-white lg:flex lg:flex-col lg:justify-center">
                         <div class="flex items-center mb-4">
@@ -172,7 +180,8 @@ const { className = "py-20 bg-white" } = Astro.props;
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            </ScrollReveal>
         </div>
     </div>
 </section>

@@ -20,12 +20,13 @@ const {
   description,
   primaryCta,
   secondaryCta,
-  backgroundClass = "bg-gradient-to-br from-primary-50 to-primary-100"
+  backgroundClass = "bg-gradient-to-br from-primary-100 to-primary-200"
 } = Astro.props;
 ---
 
-<section class={`${backgroundClass} py-20`}>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class={`${backgroundClass} py-20 relative`}>
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-primary-50 pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center">
       <h1 class="text-4xl lg:text-5xl font-bold text-neutral-800 mb-6" set:html={title}></h1>
       {subtitle && (

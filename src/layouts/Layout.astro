@@ -5,7 +5,7 @@ export interface Props {
   keywords?: string;
 }
 
-const { title, description = "GeoTerra - Bureau d'étude géotechnique expert en analyse de sol et fondations", keywords = "géotechnique, étude de sol, fondations, bureau d'étude" } = Astro.props;
+const { title, description = "GEOTERRA - Bureau d'étude géotechnique, situé en Vendée, expert en analyse de sols et fondations", keywords = "géotechnique, étude de sol, fondations, bureau d'étude, Vendée, Loire Atlantique, rénovation, BTP, argile, étude" } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,7 +15,7 @@ const { title, description = "GeoTerra - Bureau d'étude géotechnique expert en
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph / Facebook -->
@@ -23,14 +23,14 @@ const { title, description = "GeoTerra - Bureau d'étude géotechnique expert en
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image" content="/logo.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/og-image.jpg" />
+    <meta property="twitter:image" content="/logo.png" />
 
     <title>{title}</title>
   </head>

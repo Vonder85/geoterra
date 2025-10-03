@@ -1,5 +1,6 @@
 ---
 import MissionCard from './MissionCard.astro';
+import ScrollReveal from '../ScrollReveal.astro';
 
 export interface Props {
   title?: string;
@@ -66,31 +67,35 @@ const {
       colorClass: "neutral"
     }
   ],
-  className = "py-6 bg-gray-50"
+  className = "py-6 bg-primary-50"
 } = Astro.props;
 ---
 
 <section class={className}>
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
-        {title}
-      </h2>
-      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-        {description}
-      </p>
-    </div>
+    <ScrollReveal delay={200}>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
+          {title}
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          {description}
+        </p>
+      </div>
+    </ScrollReveal>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {missions.map((mission) => (
-        <MissionCard
-          title={mission.title}
-          subtitle={mission.subtitle ?? ""}
-          description={mission.description}
-          features={mission.features}
-          icon={mission.icon}
-          colorClass={mission.colorClass}
-        />
+      {missions.map((mission, index) => (
+        <ScrollReveal delay={300 + (index * 100)}>
+          <MissionCard
+            title={mission.title}
+            subtitle={mission.subtitle ?? ""}
+            description={mission.description}
+            features={mission.features}
+            icon={mission.icon}
+            colorClass={mission.colorClass}
+          />
+        </ScrollReveal>
       ))}
     </div>
   </div>
