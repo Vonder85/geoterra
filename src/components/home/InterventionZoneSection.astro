@@ -1,66 +1,116 @@
 ---
-import ScrollReveal from '../ScrollReveal.astro';
+import ScrollReveal from "../ScrollReveal.astro";
 ---
 
-<section class="py-20 bg-primary-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-      <ScrollReveal delay={200} direction="left">
+<section class='pb-10 bg-primary-50'>
+  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div class='lg:grid lg:grid-cols-2 lg:gap-16 items-center'>
+      <ScrollReveal delay={200} direction='left'>
         <div>
-          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-8">
+          <h2 class='text-3xl lg:text-4xl font-bold text-neutral-800 mb-8'>
             Notre zone d'intervention
           </h2>
-          <p class="text-xl text-neutral-600 mb-8 leading-relaxed">
-            Spécialistes de la géologie des départements de la <strong class="text-primary-600">Loire-Atlantique (44)</strong> et de la <strong class="text-primary-600">Vendée (85)</strong>, notre connaissance approfondie des spécificités de ces territoires est un atout majeur pour la qualité et la pertinence de nos études.
+          <p class='text-xl text-neutral-600 mb-8 leading-relaxed'>
+            Spécialistes de la géologie des départements de la <strong
+              class='text-primary-600'>Loire-Atlantique (44)</strong
+            > et de la <strong class='text-primary-600'>Vendée (85)</strong>,
+            notre connaissance approfondie des spécificités de ces territoires
+            est un atout majeur pour la qualité et la pertinence de nos études.
           </p>
-          <div class="grid grid-cols-2 gap-6">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-accent-500 mb-2">25 ans</div>
-              <div class="text-sm text-neutral-600">D'expérience locale</div>
+          <div class='grid grid-cols-2 gap-6'>
+            <div class='text-center'>
+              <div class='text-3xl font-bold text-accent-500 mb-2'>25 ans</div>
+              <div class='text-sm text-neutral-600'>D'expérience locale</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-accent-500 mb-2">2 dép.</div>
-              <div class="text-sm text-neutral-600">Vendée & Loire-Atlantique</div>
+            <div class='text-center'>
+              <div class='text-3xl font-bold text-accent-500 mb-2'>2 dép.</div>
+              <div class='text-sm text-neutral-600'>
+                Vendée & Loire-Atlantique
+              </div>
             </div>
           </div>
         </div>
       </ScrollReveal>
-      <ScrollReveal delay={400} direction="right">
-        <div class="mt-12 lg:mt-0">
-          <div class="bg-white p-8 rounded-lg shadow-lg border-2 border-primary-300">
-            <h3 class="text-2xl font-bold text-neutral-800 mb-6 text-center">Pourquoi l'expertise locale ?</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
-                  <svg class="h-5 w-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0V7"/>
+      <ScrollReveal delay={400} direction='right'>
+        <div class='mt-12 lg:mt-0'>
+          <div
+            class='bg-white p-8 rounded-lg shadow-lg border-2 border-primary-300'
+          >
+            <h3 class='text-2xl font-bold text-neutral-800 mb-6 text-center'>
+              Pourquoi l'expertise locale ?
+            </h3>
+            <div class='space-y-4'>
+              <div class='flex items-start'>
+                <div class='bg-primary-100 p-2 rounded-full mr-4 mt-1'>
+                  <svg
+                    class='h-5 w-5 text-primary-500'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0V7'
+                    ></path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-neutral-800">Connaissance des sols locaux</h4>
-                  <p class="text-sm text-neutral-600">Argiles, sables, remblais : nous connaissons la géologie spécifique de votre région</p>
+                  <h4 class='font-semibold text-neutral-800'>
+                    Connaissance des sols locaux
+                  </h4>
+                  <p class='text-sm text-neutral-600'>
+                    Argiles, sables, remblais : nous connaissons la géologie
+                    spécifique de votre région
+                  </p>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="bg-accent-100 p-2 rounded-full mr-4 mt-1">
-                  <svg class="h-5 w-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <div class='flex items-start'>
+                <div class='bg-accent-100 p-2 rounded-full mr-4 mt-1'>
+                  <svg
+                    class='h-5 w-5 text-accent-500'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-neutral-800">Proximité et réactivité</h4>
-                  <p class="text-sm text-neutral-600">Intervention rapide sur votre terrain, moins de déplacements</p>
+                  <h4 class='font-semibold text-neutral-800'>
+                    Proximité et réactivité
+                  </h4>
+                  <p class='text-sm text-neutral-600'>
+                    Intervention rapide sur votre terrain, moins de déplacements
+                  </p>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="bg-secondary-100 p-2 rounded-full mr-4 mt-1">
-                  <svg class="h-5 w-5 text-secondary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              <div class='flex items-start'>
+                <div class='bg-secondary-100 p-2 rounded-full mr-4 mt-1'>
+                  <svg
+                    class='h-5 w-5 text-secondary-500'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
+                    ></path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-neutral-800">Réseau local</h4>
-                  <p class="text-sm text-neutral-600">Partenariats avec les acteurs locaux de la construction</p>
+                  <h4 class='font-semibold text-neutral-800'>Réseau local</h4>
+                  <p class='text-sm text-neutral-600'>
+                    Partenariats avec les acteurs locaux de la construction
+                  </p>
                 </div>
               </div>
             </div>
