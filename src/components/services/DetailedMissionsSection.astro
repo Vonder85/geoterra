@@ -1,187 +1,316 @@
 ---
-import MissionDetailsGrid from './MissionDetailsGrid.astro';
-import ScrollReveal from '../ScrollReveal.astro';
+import ScrollReveal from "../ScrollReveal.astro";
 
 export interface Props {
   className?: string;
 }
-
-const { className = "py-20 bg-white" } = Astro.props;
-
-
 ---
 
 <!-- Nos missions -->
-<section class="py-10 bg-primary-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="space-y-12">
-            <!-- Mission G1 -->
-            <ScrollReveal delay={200}>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="lg:grid lg:grid-cols-3">
-                    <div class="bg-primary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Étude G1</h3>
-                        </div>
-                        <p class="text-primary-100">Étude géotechnique préalable</p>
-                        <div class="mt-4 text-sm text-primary-200">
-                            Indispensable lors de l'achat du terrain
-                        </div>
-                    </div>
-                    <div class="p-8 lg:col-span-2">
-                        <p class="text-neutral-600 mb-6">
-                            L'étude G1 est la première étape indispensable pour un projet de construction. Elle intervient lors de l'achat du terrain pour étudier la faisabilité de votre projet en fonction de la nature du sol et identifier les risques géotechniques.
-                        </p>
-                        <div class="space-y-3">
-                            <div class="flex items-start">
-                                <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span class="text-sm text-neutral-600">Obligatoire dans le cadre de la loi ELAN pour les terrains classés en exposition moyenne ou forte au risque de retrait-gonflement des argiles</span>
-                            </div>
-                            <div class="flex items-start">
-                                <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span class="text-sm text-neutral-600">Indispensable pour les projets de lotissement</span>
-                            </div>
-                            <div class="flex items-start">
-                                <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span class="text-sm text-neutral-600">Identification des risques : terrain argileux, remblais, etc.</span>
-                            </div>
-                        </div>
-                    </div>
+<section class='py-10 bg-primary-50'>
+  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div class='space-y-12'>
+      <!-- Mission G1 -->
+      <ScrollReveal delay={200}>
+        <div class='bg-white rounded-lg shadow-lg overflow-hidden'>
+          <div class='lg:grid lg:grid-cols-3'>
+            <div
+              class='bg-primary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center'
+            >
+              <div class='flex items-center mb-4'>
+                <div class='bg-white bg-opacity-20 p-3 rounded-full mr-4'>
+                  <svg
+                    class='h-8 w-8 text-white'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'></path>
+                  </svg>
                 </div>
+                <h3 class='text-2xl font-bold'>Étude G1</h3>
+              </div>
+              <p class='text-primary-100'>Étude géotechnique préalable</p>
+              <div class='mt-4 text-sm text-primary-200'>
+                Indispensable lors de l'achat du terrain
+              </div>
+            </div>
+            <div class='p-8 lg:col-span-2'>
+              <p class='text-neutral-600 mb-6'>
+                L'étude G1 est la première étape indispensable pour un projet de
+                construction. Elle intervient lors de l'achat du terrain pour
+                étudier la faisabilité de votre projet en fonction de la nature
+                du sol et identifier les risques géotechniques.
+              </p>
+              <div class='space-y-3'>
+                <div class='flex items-start'>
+                  <svg
+                    class='h-5 w-5 text-accent-500 mr-3 mt-0.5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'></path>
+                  </svg>
+                  <span class='text-sm text-neutral-600'
+                    >Obligatoire dans le cadre de la loi ELAN pour les terrains
+                    classés en exposition moyenne ou forte au risque de
+                    retrait-gonflement des argiles</span
+                  >
                 </div>
-            </ScrollReveal>
-
-            <!-- Mission G2 -->
-            <ScrollReveal delay={300}>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="lg:grid lg:grid-cols-3">
-                    <div class="bg-accent-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Étude G2</h3>
-                        </div>
-                        <p class="text-accent-100">Étude de conception</p>
-                        <div class="mt-4 text-sm text-accent-200">
-                            AVP et PRO - Dimensionnement des fondations
-                        </div>
-                    </div>
-                    <div class="p-8 lg:col-span-2">
-                        <p class="text-neutral-600 mb-6">
-                            La mission G2 est scindée en deux phases pour définir et dimensionner précisément les fondations adaptées à votre terrain et votre projet défini.
-                        </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="border border-accent-200 rounded-lg p-4">
-                                <h4 class="font-bold text-neutral-800 mb-2">G2 AVP (Avant-Projet)</h4>
-                                <p class="text-sm text-neutral-600">
-                                    Définition du type de fondations et des options de construction adaptées à votre terrain. Réalisée au stade de l'avant-projet.
-                                </p>
-                            </div>
-                            <div class="border border-accent-200 rounded-lg p-4">
-                                <h4 class="font-bold text-neutral-800 mb-2">G2 PRO (Projet)</h4>
-                                <p class="text-sm text-neutral-600">
-                                    Précise le dimensionnement des fondations. Rapport à transmettre au bureau d'études structure et au maçon.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class='flex items-start'>
+                  <svg
+                    class='h-5 w-5 text-accent-500 mr-3 mt-0.5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'></path>
+                  </svg>
+                  <span class='text-sm text-neutral-600'
+                    >Indispensable pour les projets de lotissement</span
+                  >
                 </div>
+                <div class='flex items-start'>
+                  <svg
+                    class='h-5 w-5 text-accent-500 mr-3 mt-0.5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'></path>
+                  </svg>
+                  <span class='text-sm text-neutral-600'
+                    >Identification des risques : terrain argileux, remblais,
+                    etc.</span
+                  >
                 </div>
-            </ScrollReveal>
-
-            <!-- Mission G5 -->
-            <ScrollReveal delay={400}>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="lg:grid lg:grid-cols-3">
-                    <div class="bg-secondary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Diagnostic G5</h3>
-                        </div>
-                        <p class="text-secondary-100">Diagnostic géotechnique</p>
-                        <div class="mt-4 text-sm text-secondary-200">
-                            En cas de surélévation, désordres, sinistres ou contrôles
-                        </div>
-                    </div>
-                    <div class="p-8 lg:col-span-2">
-                        <p class="text-neutral-600 mb-6">
-                            Cette mission est un diagnostic géotechnique ponctuel, souvent réalisé en cas de désordre ou sinistre sur une construction ou pour des contrôles spécifiques.
-                        </p>
-                        <div class="space-y-3">
-                            <div class="flex items-start">
-                                <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span class="text-sm text-neutral-600">Diagnostic en cas de fissures, affaissements</span>
-                            </div>
-                            <div class="flex items-start">
-                                <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span class="text-sm text-neutral-600">Contrôle de fondations pour surélévation</span>
-                            </div>
-                            <div class="flex items-start">
-                                <svg class="h-5 w-5 text-accent-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span class="text-sm text-neutral-600">Validation de projets de modification</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </ScrollReveal>
-
-            <!-- Mission G0 -->
-            <ScrollReveal delay={500}>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="lg:grid lg:grid-cols-3">
-                    <div class="bg-neutral-600 p-8 text-white lg:flex lg:flex-col lg:justify-center">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
-                                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Mission G0</h3>
-                        </div>
-                        <p class="text-neutral-300">Investigation géotechnique</p>
-                        <div class="mt-4 text-sm text-neutral-400">
-                            Approche simplifiée sans ingénierie
-                        </div>
-                    </div>
-                    <div class="p-8 lg:col-span-2">
-                        <p class="text-neutral-600 mb-6">
-                            Investigation de terrain simplifiée sans rapport d'ingénierie. Nous remettons uniquement un rapport factuel des sondages effectués avec les résultats des investigations.
-                        </p>
-                        <div class="bg-neutral-50 p-4 rounded-lg">
-                            <p class="text-sm text-neutral-600">
-                                <strong>Idéal pour :</strong> Une approche économique pour obtenir des données de terrain avant une étude plus approfondie ou pour des projets nécessitant uniquement des informations factuelles sur le sol.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </ScrollReveal>
+              </div>
+            </div>
+          </div>
         </div>
+      </ScrollReveal>
+
+      <!-- Mission G2 -->
+      <ScrollReveal delay={300}>
+        <div class='bg-white rounded-lg shadow-lg overflow-hidden'>
+          <div class='lg:grid lg:grid-cols-3'>
+            <div
+              class='bg-accent-500 p-8 text-white lg:flex lg:flex-col lg:justify-center'
+            >
+              <div class='flex items-center mb-4'>
+                <div class='bg-white bg-opacity-20 p-3 rounded-full mr-4'>
+                  <svg
+                    class='h-8 w-8 text-white'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class='text-2xl font-bold'>Étude G2</h3>
+              </div>
+              <p class='text-accent-100'>Étude de conception</p>
+              <div class='mt-4 text-sm text-accent-200'>
+                AVP et PRO - Dimensionnement des fondations
+              </div>
+            </div>
+            <div class='p-8 lg:col-span-2'>
+              <p class='text-neutral-600 mb-6'>
+                La mission G2 est scindée en deux phases pour définir et
+                dimensionner précisément les fondations adaptées à votre terrain
+                et votre projet défini.
+              </p>
+              <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                <div class='border border-accent-200 rounded-lg p-4'>
+                  <h4 class='font-bold text-neutral-800 mb-2'>
+                    G2 AVP (Avant-Projet)
+                  </h4>
+                  <p class='text-sm text-neutral-600'>
+                    Définition du type de fondations et des options de
+                    construction adaptées à votre terrain. Réalisée au stade de
+                    l'avant-projet.
+                  </p>
+                </div>
+                <div class='border border-accent-200 rounded-lg p-4'>
+                  <h4 class='font-bold text-neutral-800 mb-2'>
+                    G2 PRO (Projet)
+                  </h4>
+                  <p class='text-sm text-neutral-600'>
+                    Précise le dimensionnement des fondations. Rapport à
+                    transmettre au bureau d'études structure et au maçon.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <!-- Mission G5 -->
+      <ScrollReveal delay={400}>
+        <div class='bg-white rounded-lg shadow-lg overflow-hidden'>
+          <div class='lg:grid lg:grid-cols-3'>
+            <div
+              class='bg-secondary-500 p-8 text-white lg:flex lg:flex-col lg:justify-center'
+            >
+              <div class='flex items-center mb-4'>
+                <div class='bg-white bg-opacity-20 p-3 rounded-full mr-4'>
+                  <svg
+                    class='h-8 w-8 text-white'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class='text-2xl font-bold'>Diagnostic G5</h3>
+              </div>
+              <p class='text-secondary-100'>Diagnostic géotechnique</p>
+              <div class='mt-4 text-sm text-secondary-200'>
+                En cas de surélévation, désordres, sinistres ou contrôles
+              </div>
+            </div>
+            <div class='p-8 lg:col-span-2'>
+              <p class='text-neutral-600 mb-6'>
+                Cette mission est un diagnostic géotechnique ponctuel, souvent
+                réalisé en cas de désordre ou sinistre sur une construction ou
+                pour des contrôles spécifiques.
+              </p>
+              <div class='space-y-3'>
+                <div class='flex items-start'>
+                  <svg
+                    class='h-5 w-5 text-accent-500 mr-3 mt-0.5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'></path>
+                  </svg>
+                  <span class='text-sm text-neutral-600'
+                    >Diagnostic en cas de fissures, affaissements</span
+                  >
+                </div>
+                <div class='flex items-start'>
+                  <svg
+                    class='h-5 w-5 text-accent-500 mr-3 mt-0.5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'></path>
+                  </svg>
+                  <span class='text-sm text-neutral-600'
+                    >Contrôle de fondations pour surélévation</span
+                  >
+                </div>
+                <div class='flex items-start'>
+                  <svg
+                    class='h-5 w-5 text-accent-500 mr-3 mt-0.5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'></path>
+                  </svg>
+                  <span class='text-sm text-neutral-600'
+                    >Validation de projets de modification</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <!-- Mission G0 -->
+      <ScrollReveal delay={500}>
+        <div class='bg-white rounded-lg shadow-lg overflow-hidden'>
+          <div class='lg:grid lg:grid-cols-3'>
+            <div
+              class='bg-neutral-600 p-8 text-white lg:flex lg:flex-col lg:justify-center'
+            >
+              <div class='flex items-center mb-4'>
+                <div class='bg-white bg-opacity-20 p-3 rounded-full mr-4'>
+                  <svg
+                    class='h-8 w-8 text-white'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122'
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class='text-2xl font-bold'>Mission G0</h3>
+              </div>
+              <p class='text-neutral-300'>Investigation géotechnique</p>
+              <div class='mt-4 text-sm text-neutral-400'>
+                Approche simplifiée sans ingénierie
+              </div>
+            </div>
+            <div class='p-8 lg:col-span-2'>
+              <p class='text-neutral-600 mb-6'>
+                Investigation de terrain simplifiée sans rapport d'ingénierie.
+                Nous remettons uniquement un rapport factuel des sondages
+                effectués avec les résultats des investigations.
+              </p>
+              <div class='bg-neutral-50 p-4 rounded-lg'>
+                <p class='text-sm text-neutral-600'>
+                  <strong>Idéal pour :</strong> Une approche économique pour obtenir
+                  des données de terrain avant une étude plus approfondie ou pour
+                  des projets nécessitant uniquement des informations factuelles
+                  sur le sol.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
     </div>
+  </div>
 </section>

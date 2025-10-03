@@ -4,7 +4,7 @@ export interface Props {
   delay?: number;
   duration?: number;
   distance?: string;
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: "up" | "down" | "left" | "right";
   children?: any;
 }
 
@@ -14,7 +14,6 @@ const {
   duration = 800,
   distance = "30px",
   direction = "up",
-  children
 } = Astro.props;
 
 // Générer un ID unique pour l'élément
@@ -63,40 +62,42 @@ const elementId = `scroll-reveal-${Math.random().toString(36).substr(2, 9)}`;
 
 <script>
   function initScrollReveal() {
-    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    const scrollElements = document.querySelectorAll(".scroll-reveal");
 
     const elementInView = (el: Element, dividend = 1) => {
       const elementTop = el.getBoundingClientRect().top;
       return (
-        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
       );
     };
 
     const elementOutofView = (el: Element) => {
       const elementTop = el.getBoundingClientRect().top;
       return (
-        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+        elementTop >
+        (window.innerHeight || document.documentElement.clientHeight)
       );
     };
 
     const displayScrollElement = (element: Element) => {
       const htmlElement = element as HTMLElement;
-      const delay = parseInt(htmlElement.dataset.delay || '0');
-      const duration = parseInt(htmlElement.dataset.duration || '800');
-      const distance = htmlElement.dataset.distance || '30px';
+      const delay = parseInt(htmlElement.dataset.delay || "0");
+      const duration = parseInt(htmlElement.dataset.duration || "800");
+      const distance = htmlElement.dataset.distance || "30px";
 
       // Définir les variables CSS
-      htmlElement.style.setProperty('--distance', distance);
+      htmlElement.style.setProperty("--distance", distance);
       htmlElement.style.transitionDuration = `${duration}ms`;
 
       setTimeout(() => {
-        htmlElement.classList.add('revealed');
+        htmlElement.classList.add("revealed");
       }, delay);
     };
 
     const hideScrollElement = (element: Element) => {
       const htmlElement = element as HTMLElement;
-      htmlElement.classList.remove('revealed');
+      htmlElement.classList.remove("revealed");
     };
 
     const handleScrollAnimation = () => {
@@ -113,7 +114,7 @@ const elementId = `scroll-reveal-${Math.random().toString(36).substr(2, 9)}`;
     handleScrollAnimation();
 
     // Écouter le scroll
-    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener("scroll", handleScrollAnimation);
 
     // Observer pour les éléments ajoutés dynamiquement
     const observer = new MutationObserver(() => {
@@ -122,13 +123,13 @@ const elementId = `scroll-reveal-${Math.random().toString(36).substr(2, 9)}`;
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
   }
 
   // Attendre que le DOM soit chargé
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initScrollReveal);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initScrollReveal);
   } else {
     initScrollReveal();
   }
