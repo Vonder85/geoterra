@@ -1,10 +1,7 @@
 {
   "buildCommand": "npm run build",
   "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    },
-    "api/**/*.ts": {
+    "_render.func": {
       "runtime": "nodejs20.x"
     }
   }

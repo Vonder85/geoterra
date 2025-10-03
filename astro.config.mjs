@@ -10,7 +10,5 @@ export default defineConfig({
   compilerOptions: {
     strict: true,
   },
-  adapter: vercel({
-    runtime: "nodejs20.x",
-  }),
+  adapter: vercel(),
 });
