@@ -1,6 +1,6 @@
 ---
-import ChecklistItem from '../ChecklistItem.astro';
-import EquipmentSection from './EquipmentSection.astro';
+import ChecklistItem from "../ChecklistItem.astro";
+import EquipmentSection from "./EquipmentSection.astro";
 
 export interface Props {
   title?: string;
@@ -8,7 +8,7 @@ export interface Props {
   description?: string;
   checklistItems?: Array<{
     text: string;
-    colorClass?: 'primary' | 'accent' | 'secondary' | 'neutral';
+    colorClass?: "primary" | "accent" | "secondary" | "neutral";
   }>;
   equipmentItems?: Array<{
     title: string;
@@ -16,7 +16,7 @@ export interface Props {
     icon?: string;
     iconSrc?: string;
     iconAlt?: string;
-    colorClass?: 'primary' | 'accent' | 'secondary' | 'neutral';
+    colorClass?: "primary" | "accent" | "secondary" | "neutral";
   }>;
   className?: string;
 }
@@ -28,105 +28,111 @@ const {
   checklistItems = [
     { text: "Minimum de 4 pénétromètres dynamiques", colorClass: "primary" },
     { text: "Sondages jusqu'à 6 mètres de profondeur", colorClass: "primary" },
-    { text: "Sondages supplémentaires si nécessaires (sans frais)", colorClass: "primary" },
-    { text: "Cartographie l'anomalie afin d'adapter les fondations le plus précisément possible", colorClass: "primary" }
+    {
+      text: "Sondages supplémentaires si nécessaires (sans frais)",
+      colorClass: "primary",
+    },
+    {
+      text: "Cartographie l'anomalie afin d'adapter les fondations le plus précisément possible",
+      colorClass: "primary",
+    },
   ],
-  equipmentItems = [
-    {
-      title: "Machine PAGANI TG-63",
-      description: "Forage haute précision",
-      iconSrc: "/icons/machine.svg",
-      iconAlt: "Machine PAGANI",
-      colorClass: "accent"
-    },
-    {
-      title: "Pénétromètres",
-      description: "Dynamiques et statiques",
-      icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-      colorClass: "accent"
-    },
-    {
-      title: "Tarière thermique",
-      description: "Prélèvement d'échantillons",
-      iconSrc: "/icons/tariere-1.svg",
-      iconAlt: "Tarière mécanique",
-      colorClass: "accent"
-    },
-    {
-      title: "Laser de précision",
-      description: "Nivellement laser",
-      iconSrc: "/icons/laser.svg",
-      iconAlt: "Laser de précision",
-      colorClass: "accent"
-    }
-  ],
-  className = "py-10 bg-primary-50"
+  className = "py-10 bg-primary-50",
 } = Astro.props;
 ---
 
 <section class={className}>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
-        {title.includes('span') ? (
-          <span set:html={title}></span>
-        ) : (
-          <span>
-            {title.split(' : ')[0]} : <span class="text-primary-500">{title.split(' : ')[1]}</span>
-          </span>
-        )}
+  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div class='text-center mb-16'>
+      <h2 class='text-3xl lg:text-4xl font-bold text-neutral-800 mb-6'>
+        {
+          title.includes("span") ? (
+            <span set:html={title} />
+          ) : (
+            <span>
+              {title.split(" : ")[0]} :{" "}
+              <span class='text-primary-500'>{title.split(" : ")[1]}</span>
+            </span>
+          )
+        }
       </h2>
-      <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-        Chez GEOTERRA, chaque étude de sol est menée avec une rigueur méthodologique par le géotechnicien qui rédige ensuite le rapport de sol, ce qui garantit la fiabilité de nos diagnostics et la pertinence de nos recommandations.
+      <p class='text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed'>
+        Chez GEOTERRA, chaque étude de sol est menée avec une rigueur
+        méthodologique par le géotechnicien qui rédige ensuite le rapport de
+        sol, ce qui garantit la fiabilité de nos diagnostics et la pertinence de
+        nos recommandations.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+    <div class='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20'>
       <div>
-        <h3 class="text-2xl font-bold text-neutral-800 mb-6">
+        <h3 class='text-2xl font-bold text-neutral-800 mb-6'>
           {subtitle}
         </h3>
-        <div class="space-y-4 text-neutral-600">
+        <div class='space-y-4 text-neutral-600'>
           <p>{description}</p>
-          <div class="bg-primary-50 p-6 rounded-lg">
-            <h4 class="font-semibold text-neutral-800 mb-3">Pour un projet standard G2 :</h4>
-            <ul class="space-y-2 text-sm">
-              <li class="flex items-center">
-                <svg class="h-4 w-4 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          <div class='bg-primary-50 p-6 rounded-lg'>
+            <h4 class='font-semibold text-neutral-800 mb-3'>
+              Pour un projet standard G2 :
+            </h4>
+            <ul class='space-y-2 text-sm'>
+              <li class='flex items-center'>
+                <svg
+                  class='h-4 w-4 text-primary-500 mr-2'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'></path>
                 </svg>
                 Minimum de 4 pénétromètres dynamiques
               </li>
-              {checklistItems.map((item) => (
-                <ChecklistItem
-                  textSecondary={item.text}
-                  colorClass={item.colorClass}
-                />
-              ))}
+              {
+                checklistItems.map((item) => (
+                  <ChecklistItem
+                    textSecondary={item.text}
+                    colorClass={item.colorClass}
+                  />
+                ))
+              }
             </ul>
           </div>
         </div>
       </div>
-      <EquipmentSection items={equipmentItems} />
+      <EquipmentSection />
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div class="bg-white border border-primary-200 rounded-lg p-8 shadow-md">
-        <h4 class="text-xl font-bold text-neutral-800 mb-4">Tarière mécanique et analyse</h4>
-        <p class="text-neutral-600 mb-4">
-          Nous réalisons une tarière mécanique minimum de 2 à 3 mètres de profondeur pour prélever des échantillons de sol et les analyser en laboratoire (en cas de sol argileux).
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-8 mb-16'>
+      <div class='bg-white border border-primary-200 rounded-lg p-8 shadow-md'>
+        <h4 class='text-xl font-bold text-neutral-800 mb-4'>
+          Tarière mécanique et analyse
+        </h4>
+        <p class='text-neutral-600 mb-4'>
+          Nous réalisons une tarière mécanique minimum de 2 à 3 mètres de
+          profondeur pour prélever des échantillons de sol et les analyser en
+          laboratoire (en cas de sol argileux).
         </p>
-        <p class="text-sm text-neutral-500">
-          Les données sont croisées avec celles des pénétromètres pour une corrélation parfaite.
+        <p class='text-sm text-neutral-500'>
+          Les données sont croisées avec celles des pénétromètres pour une
+          corrélation parfaite.
         </p>
       </div>
-      <div class="bg-white border border-primary-200 rounded-lg p-8 shadow-md">
-        <h4 class="text-xl font-bold text-neutral-800 mb-4">Sécurité de l'existant</h4>
-        <p class="text-neutral-600 mb-4">
-          Reconnaissances de fondation sur les constructions mitoyennes et nivellement laser des points de sondages pour la précision et la traçabilité.
+      <div class='bg-white border border-primary-200 rounded-lg p-8 shadow-md'>
+        <h4 class='text-xl font-bold text-neutral-800 mb-4'>
+          Sécurité de l'existant
+        </h4>
+        <p class='text-neutral-600 mb-4'>
+          Reconnaissances de fondation sur les constructions mitoyennes et
+          nivellement laser des points de sondages pour la précision et la
+          traçabilité.
         </p>
-        <p class="text-sm text-neutral-500">
-          Adaptation des futures fondations pour éviter l'impact sur les bâtiments voisins.
+        <p class='text-sm text-neutral-500'>
+          Adaptation des futures fondations pour éviter l'impact sur les
+          bâtiments voisins.
         </p>
       </div>
     </div>
