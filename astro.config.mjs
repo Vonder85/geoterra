@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   output: "server",
-  site: "https://geoterra.fr",
+  site: "https://be-geoterra.fr",
   integrations: [tailwind()],
   adapter: vercel({
     runtime: "nodejs20.x",

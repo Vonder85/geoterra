@@ -1,67 +1,73 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Hero from '../components/Hero.astro';
-import Methodology from '../components/services/Methodology.astro';
-import MissionsSection from '../components/services/MissionsSection.astro';
-import DetailedMissionsSection from '../components/services/DetailedMissionsSection.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Methodology from "../components/services/Methodology.astro";
+import MissionsSection from "../components/services/MissionsSection.astro";
+import DetailedMissionsSection from "../components/services/DetailedMissionsSection.astro";
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Services géotechniques GEOTERRA",
-  "provider": {
+  name: "Services géotechniques GEOTERRA",
+  provider: {
     "@type": "LocalBusiness",
-    "name": "GEOTERRA",
-    "url": "https://geoterra.fr"
+    name: "GEOTERRA",
+    url: "https://be-geoterra.fr",
   },
-  "areaServed": [
+  areaServed: [
     {
       "@type": "State",
-      "name": "Vendée"
+      name: "Vendée",
     },
     {
       "@type": "State",
-      "name": "Loire-Atlantique"
-    }
+      name: "Loire-Atlantique",
+    },
   ],
-  "serviceType": "Études géotechniques",
-  "description": "GEOTERRA propose des études géotechniques complètes pour la maison individuelle et les petits collectifs : études G1, G2, G5, missions d'investigation et dimensionnement de fondations.",
-  "hasOfferCatalog": {
+  serviceType: "Études géotechniques",
+  description:
+    "GEOTERRA propose des études géotechniques complètes pour la maison individuelle et les petits collectifs : études G1, G2, G5, missions d'investigation et dimensionnement de fondations.",
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Services géotechniques",
-    "itemListElement": [
+    name: "Services géotechniques",
+    itemListElement: [
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Étude géotechnique G1",
-          "description": "Étude préalable pour évaluer la faisabilité du projet"
-        }
+          name: "Étude géotechnique G1",
+          description: "Étude préalable pour évaluer la faisabilité du projet",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Étude géotechnique G2",
-          "description": "Étude de conception pour dimensionner les fondations"
-        }
+          name: "Étude géotechnique G2",
+          description: "Étude de conception pour dimensionner les fondations",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Étude géotechnique G5",
-          "description": "Diagnostic géotechnique d'un bâtiment existant"
-        }
-      }
-    ]
-  }
+          name: "Étude géotechnique G5",
+          description: "Diagnostic géotechnique d'un bâtiment existant",
+        },
+      },
+    ],
+  },
 };
 ---
 
-<Layout title="Nos services - GeoTerra" description="Découvrez tous nos services géotechniques : étude G1, G2, G5, missions d'investigation. Expertise et méthodologie rigoureuse pour tous vos projets." keywords="services géotechniques, étude G1, G2, G5, fondations, sondages" jsonLd={servicesJsonLd}>
+<Layout
+  title='Nos services - GeoTerra'
+  description="Découvrez tous nos services géotechniques : étude G1, G2, G5, missions d'investigation. Expertise et méthodologie rigoureuse pour tous vos projets."
+  keywords='services géotechniques, étude G1, G2, G5, fondations, sondages'
+  jsonLd={servicesJsonLd}
+>
   <Header />
 
   <main>
@@ -77,20 +83,29 @@ const servicesJsonLd = {
     <DetailedMissionsSection />
 
     <!-- CTA Section -->
-    <section class="py-10 bg-gradient-to-r from-accent-500 to-accent-600">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+    <section class='py-10 bg-gradient-to-r from-accent-500 to-accent-600'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <h2 class='text-3xl lg:text-4xl font-bold text-white mb-6'>
           Prêt à démarrer votre projet ?
         </h2>
-        <p class="text-xl text-accent-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Contactez GEOTERRA dès aujourd'hui pour obtenir votre devis personnalisé sous 48h maximum.
-          Nos experts vous accompagnent de A à Z dans votre étude géotechnique.
+        <p
+          class='text-xl text-accent-100 mb-8 max-w-3xl mx-auto leading-relaxed'
+        >
+          Contactez GEOTERRA dès aujourd'hui pour obtenir votre devis
+          personnalisé sous 48h maximum. Nos experts vous accompagnent de A à Z
+          dans votre étude géotechnique.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-100 transition-colors shadow-lg">
+        <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+          <a
+            href='/contact'
+            class='bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-100 transition-colors shadow-lg'
+          >
             Obtenir un devis gratuit
           </a>
-          <a href="/entreprise" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors">
+          <a
+            href='/entreprise'
+            class='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors'
+          >
             Découvrir l'entreprise
           </a>
         </div>

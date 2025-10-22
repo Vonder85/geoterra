@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://geoterra.fr/sitemap.xml
+Sitemap: https://be-geoterra.fr/sitemap.xml

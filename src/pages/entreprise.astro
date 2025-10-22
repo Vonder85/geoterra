@@ -1,72 +1,78 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Hero from '../components/Hero.astro';
-import EngagementCard from '../components/contact/EngagementCard.astro';
-import ScrollReveal from '../components/ScrollReveal.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import EngagementCard from "../components/contact/EngagementCard.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
 
 const entrepriseJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "mainEntity": {
+  mainEntity: {
     "@type": ["LocalBusiness", "ProfessionalService"],
-    "name": "GEOTERRA",
-    "description": "Bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs",
-    "foundingDate": "2025-05",
-    "url": "https://geoterra.fr",
-    "telephone": "+33686082100",
-    "email": "contact@be-geoterra.fr",
-    "address": {
+    name: "GEOTERRA",
+    description:
+      "Bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs",
+    foundingDate: "2025-05",
+    url: "https://be-geoterra.fr",
+    telephone: "+33686082100",
+    email: "contact@be-geoterra.fr",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Vendée",
-      "addressRegion": "Pays de la Loire",
-      "addressCountry": "FR"
+      addressLocality: "Vendée",
+      addressRegion: "Pays de la Loire",
+      addressCountry: "FR",
     },
-    "areaServed": [
+    areaServed: [
       {
         "@type": "State",
-        "name": "Vendée"
+        name: "Vendée",
       },
       {
         "@type": "State",
-        "name": "Loire-Atlantique"
-      }
+        name: "Loire-Atlantique",
+      },
     ],
-    "employee": [
+    employee: [
       {
         "@type": "Person",
-        "name": "Vincent Menuet",
-        "jobTitle": "Ingénieur géotechnicien - Gérant",
-        "email": "vmenuet@be-geoterra.fr",
-        "telephone": "+33686156546",
-        "alumniOf": "École d'ingénieurs",
-        "yearsOfExperience": "25"
+        name: "Vincent Menuet",
+        jobTitle: "Ingénieur géotechnicien - Gérant",
+        email: "vmenuet@be-geoterra.fr",
+        telephone: "+33686156546",
+        alumniOf: "École d'ingénieurs",
+        yearsOfExperience: "25",
       },
       {
         "@type": "Person",
-        "name": "Maxime Robin",
-        "jobTitle": "Géotechnicien spécialisé - Gérant",
-        "email": "mrobin@be-geoterra.fr",
-        "telephone": "+33686082100",
-        "yearsOfExperience": "5"
-      }
+        name: "Maxime Robin",
+        jobTitle: "Géotechnicien spécialisé - Gérant",
+        email: "mrobin@be-geoterra.fr",
+        telephone: "+33686082100",
+        yearsOfExperience: "5",
+      },
     ],
-    "slogan": "Votre partenaire en géotechnique en Vendée et Loire-Atlantique",
-    "serviceArea": {
+    slogan: "Votre partenaire en géotechnique en Vendée et Loire-Atlantique",
+    serviceArea: {
       "@type": "GeoCircle",
-      "geoMidpoint": {
+      geoMidpoint: {
         "@type": "GeoCoordinates",
-        "latitude": 46.6703,
-        "longitude": -1.4269
+        latitude: 46.6703,
+        longitude: -1.4269,
       },
-      "geoRadius": "100000"
-    }
-  }
+      geoRadius: "100000",
+    },
+  },
 };
 ---
 
-<Layout title="L'entreprise - GeoTerra" description="Découvrez GeoTerra, bureau d'étude géotechnique fondé par des ingénieurs passionnés. Notre expertise et notre approche personnalisée garantissent la réussite de vos projets de construction." keywords="bureau d'étude géotechnique, entreprise, équipe, expertise, ingénieurs" jsonLd={entrepriseJsonLd}>
+<Layout
+  title="L'entreprise - GeoTerra"
+  description="Découvrez GeoTerra, bureau d'étude géotechnique fondé par des ingénieurs passionnés. Notre expertise et notre approche personnalisée garantissent la réussite de vos projets de construction."
+  keywords="bureau d'étude géotechnique, entreprise, équipe, expertise, ingénieurs"
+  jsonLd={entrepriseJsonLd}
+>
   <Header />
 
   <main>
@@ -76,46 +82,54 @@ const entrepriseJsonLd = {
     />
 
     <!-- Qui sommes-nous -->
-    <section class="py-20 bg-primary-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-          <ScrollReveal delay={200} direction="left">
+    <section class='py-20 bg-primary-50'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='lg:grid lg:grid-cols-2 lg:gap-16 items-center'>
+          <ScrollReveal delay={200} direction='left'>
             <div>
-              <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-8">
+              <h2 class='text-3xl lg:text-4xl font-bold text-neutral-800 mb-8'>
                 Qui sommes-nous ?
               </h2>
-              <p class="text-2xl font-semibold text-accent-500 mb-6">
+              <p class='text-2xl font-semibold text-accent-500 mb-6'>
                 Votre partenaire en géotechnique en Vendée et Loire-Atlantique
               </p>
-              <div class="space-y-6 text-neutral-600 text-lg">
+              <div class='space-y-6 text-neutral-600 text-lg'>
                 <p>
-                  Bienvenue chez GEOTERRA, votre nouveau bureau d'études géotechniques. Spécialisés dans la maison individuelle et les petits collectifs, nous sommes fondés en mai 2025 par deux associés passionnés, Vincent MENUET et Maxime ROBIN. Notre société est née d'une volonté simple : apporter une expertise locale et une réactivité sans faille à tous vos projets de construction.
+                  Bienvenue chez GEOTERRA, votre nouveau bureau d'études
+                  géotechniques. Spécialisés dans la maison individuelle et les
+                  petits collectifs, nous sommes fondés en mai 2025 par deux
+                  associés passionnés, Vincent MENUET et Maxime ROBIN. Notre
+                  société est née d'une volonté simple : apporter une expertise
+                  locale et une réactivité sans faille à tous vos projets de
+                  construction.
                 </p>
               </div>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={400} direction="right">
-            <div class="mt-12 lg:mt-0">
-              <div class="bg-gray-50 rounded-lg p-8">
-                <h3 class="text-2xl font-bold text-neutral-800 mb-6">Nos engagements</h3>
-                <div class="space-y-4">
+          <ScrollReveal delay={400} direction='right'>
+            <div class='mt-12 lg:mt-0'>
+              <div class='bg-gray-50 rounded-lg p-8'>
+                <h3 class='text-2xl font-bold text-neutral-800 mb-6'>
+                  Nos engagements
+                </h3>
+                <div class='space-y-4'>
                   <EngagementCard
-                    title="Devis sous 48h"
-                    description="Réactivité garantie"
-                    icon="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    colorClass="primary"
+                    title='Devis sous 48h'
+                    description='Réactivité garantie'
+                    icon='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
+                    colorClass='primary'
                   />
                   <EngagementCard
-                    title="Rapport sous 10 jours"
-                    description="Après intervention sur site"
-                    icon="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                    colorClass="primary"
+                    title='Rapport sous 10 jours'
+                    description='Après intervention sur site'
+                    icon='M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2'
+                    colorClass='primary'
                   />
                   <EngagementCard
-                    title="Intervention sous 15 jours"
-                    description="Après validation du devis"
-                    icon="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    colorClass="primary"
+                    title='Intervention sous 15 jours'
+                    description='Après validation du devis'
+                    icon='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+                    colorClass='primary'
                   />
                 </div>
               </div>
@@ -126,33 +140,45 @@ const entrepriseJsonLd = {
     </section>
 
     <!-- Notre Expertise -->
-    <section class="py-20 bg-primary-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-          <ScrollReveal delay={200} direction="left">
+    <section class='py-20 bg-primary-50'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='lg:grid lg:grid-cols-2 lg:gap-16 items-center'>
+          <ScrollReveal delay={200} direction='left'>
             <div>
-              <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-8">
+              <h2 class='text-3xl lg:text-4xl font-bold text-neutral-800 mb-8'>
                 Notre expertise, votre tranquillité
               </h2>
-              <div class="space-y-6 text-neutral-600 text-lg">
+              <div class='space-y-6 text-neutral-600 text-lg'>
                 <p>
-                  Vincent MENUET, ingénieur géotechnicien fort de 25 ans d'expérience dans les départements de la Vendée (85) et de la Loire-Atlantique (44), a notamment dirigé des bureaux d'études reconnus. À ses côtés, Maxime ROBIN, géotechnicien spécialisé avec 5 ans d'expérience sur le terrain et en rédaction de rapports, apporte une connaissance pointue du sol.
+                  Vincent MENUET, ingénieur géotechnicien fort de 25 ans
+                  d'expérience dans les départements de la Vendée (85) et de la
+                  Loire-Atlantique (44), a notamment dirigé des bureaux d'études
+                  reconnus. À ses côtés, Maxime ROBIN, géotechnicien spécialisé
+                  avec 5 ans d'expérience sur le terrain et en rédaction de
+                  rapports, apporte une connaissance pointue du sol.
                 </p>
                 <p>
-                  Ensemble, nous formons une équipe complémentaire, alliant une expertise solide à une maîtrise parfaite du secteur.
+                  Ensemble, nous formons une équipe complémentaire, alliant une
+                  expertise solide à une maîtrise parfaite du secteur.
                 </p>
               </div>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={400} direction="right">
-            <div class="mt-12 lg:mt-0">
-              <div class="bg-white rounded-lg p-8 shadow-lg">
-                <h3 class="text-2xl font-bold text-neutral-800 mb-6">Des délais maîtrisés, des engagements tenus</h3>
-                <p class="text-neutral-600 mb-6">
-                  Nous savons que les délais sont cruciaux pour la réussite de vos projets. C'est pourquoi, chez GEOTERRA, la réactivité est au cœur de notre service.
+          <ScrollReveal delay={400} direction='right'>
+            <div class='mt-12 lg:mt-0'>
+              <div class='bg-white rounded-lg p-8 shadow-lg'>
+                <h3 class='text-2xl font-bold text-neutral-800 mb-6'>
+                  Des délais maîtrisés, des engagements tenus
+                </h3>
+                <p class='text-neutral-600 mb-6'>
+                  Nous savons que les délais sont cruciaux pour la réussite de
+                  vos projets. C'est pourquoi, chez GEOTERRA, la réactivité est
+                  au cœur de notre service.
                 </p>
-                <p class="text-neutral-600">
-                  Du début à la fin, nous gérons votre étude de sol de A à Z, du premier contact jusqu'à la remise du rapport, pour vous garantir un service clé en main.
+                <p class='text-neutral-600'>
+                  Du début à la fin, nous gérons votre étude de sol de A à Z, du
+                  premier contact jusqu'à la remise du rapport, pour vous
+                  garantir un service clé en main.
                 </p>
               </div>
             </div>
@@ -162,64 +188,96 @@ const entrepriseJsonLd = {
     </section>
 
     <!-- Notre Équipe -->
-    <section class="py-20 bg-primary-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class='py-20 bg-primary-50'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <ScrollReveal delay={200}>
-          <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
+          <div class='text-center mb-16'>
+            <h2 class='text-3xl lg:text-4xl font-bold text-neutral-800 mb-6'>
               Notre équipe
             </h2>
-            <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Une équipe d'ingénieurs et de techniciens expérimentés, passionnés par leur métier
+            <p class='text-xl text-neutral-600 max-w-3xl mx-auto'>
+              Une équipe d'ingénieurs et de techniciens expérimentés, passionnés
+              par leur métier
             </p>
           </div>
         </ScrollReveal>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
           <ScrollReveal delay={300}>
-            <div class="bg-white rounded-lg p-8 text-center shadow-md">
-            <div class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
-              <img src="/image/vincent.jpeg" alt="Vincent MENUET" class="w-full h-full object-cover" />
-            </div>
-            <h3 class="text-2xl font-bold text-neutral-800 mb-3">Vincent MENUET</h3>
-            <p class="text-primary-600 font-medium mb-4">Ingénieur géotechnicien - Associé</p>
-            <p class="text-neutral-600">
-              Ingénieur géotechnicien fort de 25 ans d'expérience dans les départements de la Vendée (85) et de la Loire-Atlantique (44). A notamment dirigé des bureaux d'études reconnus.
-            </p>
-              <p class="text-accent-600 mt-4">
-                  <a href="mailto:vmenuet@be-geoterra.fr" class="hover:text-primary-600 transition-colors">
-                      vmenuet@be-geoterra.fr
-                  </a>
+            <div class='bg-white rounded-lg p-8 text-center shadow-md'>
+              <div class='w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full'>
+                <img
+                  src='/image/vincent.jpeg'
+                  alt='Vincent MENUET'
+                  class='w-full h-full object-cover'
+                />
+              </div>
+              <h3 class='text-2xl font-bold text-neutral-800 mb-3'>
+                Vincent MENUET
+              </h3>
+              <p class='text-primary-600 font-medium mb-4'>
+                Ingénieur géotechnicien - Associé
+              </p>
+              <p class='text-neutral-600'>
+                Ingénieur géotechnicien fort de 25 ans d'expérience dans les
+                départements de la Vendée (85) et de la Loire-Atlantique (44). A
+                notamment dirigé des bureaux d'études reconnus.
+              </p>
+              <p class='text-accent-600 mt-4'>
+                <a
+                  href='mailto:vmenuet@be-geoterra.fr'
+                  class='hover:text-primary-600 transition-colors'
+                >
+                  vmenuet@be-geoterra.fr
+                </a>
               </p>
 
-              <p class="text-accent-600">
-                  <a href="tel:+33686156546" class="hover:text-primary-600 transition-colors">
-                      06 86 15 65 46
-                  </a>
+              <p class='text-accent-600'>
+                <a
+                  href='tel:+33686156546'
+                  class='hover:text-primary-600 transition-colors'
+                >
+                  06 86 15 65 46
+                </a>
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={400}>
-            <div class="bg-white rounded-lg p-8 text-center shadow-md">
-            <div class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
-              <img src="/image/max.jpeg" alt="Maxime ROBIN" class="w-full h-full object-cover" />
-            </div>
-            <h3 class="text-2xl font-bold text-neutral-800 mb-3">Maxime ROBIN</h3>
-            <p class="text-primary-600 font-medium mb-4">Géotechnicien spécialisé - Associé</p>
-            <p class="text-neutral-600">
-              Géotechnicien spécialisé avec 5 ans d'expérience sur le terrain et en rédaction de rapports. Apporte une connaissance pointue du sol.
-            </p>
-              <p class="text-accent-600 mt-10">
-                  <a href="mailto:mrobin@be-geoterra.fr" class="hover:text-primary-600 transition-colors">
-                      mrobin@be-geoterra.fr
-                  </a>
-
+            <div class='bg-white rounded-lg p-8 text-center shadow-md'>
+              <div class='w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full'>
+                <img
+                  src='/image/max.jpeg'
+                  alt='Maxime ROBIN'
+                  class='w-full h-full object-cover'
+                />
+              </div>
+              <h3 class='text-2xl font-bold text-neutral-800 mb-3'>
+                Maxime ROBIN
+              </h3>
+              <p class='text-primary-600 font-medium mb-4'>
+                Géotechnicien spécialisé - Associé
               </p>
-              <p class="text-accent-600">
-              <a href="tel:+33686082100" class="hover:text-primary-600 transition-colors">
+              <p class='text-neutral-600'>
+                Géotechnicien spécialisé avec 5 ans d'expérience sur le terrain
+                et en rédaction de rapports. Apporte une connaissance pointue du
+                sol.
+              </p>
+              <p class='text-accent-600 mt-10'>
+                <a
+                  href='mailto:mrobin@be-geoterra.fr'
+                  class='hover:text-primary-600 transition-colors'
+                >
+                  mrobin@be-geoterra.fr
+                </a>
+              </p>
+              <p class='text-accent-600'>
+                <a
+                  href='tel:+33686082100'
+                  class='hover:text-primary-600 transition-colors'
+                >
                   06 86 08 21 00
-              </a>
+                </a>
               </p>
             </div>
           </ScrollReveal>
@@ -228,54 +286,103 @@ const entrepriseJsonLd = {
     </section>
 
     <!-- Nos Certifications -->
-    <section class="py-20 bg-primary-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class='py-20 bg-primary-50'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <ScrollReveal delay={200}>
-          <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
+          <div class='text-center mb-16'>
+            <h2 class='text-3xl lg:text-4xl font-bold text-neutral-800 mb-6'>
               Nos certifications et garanties
             </h2>
-            <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-              La qualité et la conformité de nos prestations sont garanties par nos certifications professionnelles
+            <p class='text-xl text-neutral-600 max-w-3xl mx-auto'>
+              La qualité et la conformité de nos prestations sont garanties par
+              nos certifications professionnelles
             </p>
           </div>
         </ScrollReveal>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           <ScrollReveal delay={300}>
-            <div class="bg-white rounded-lg p-6 text-center shadow-md">
-              <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="h-8 w-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            <div class='bg-white rounded-lg p-6 text-center shadow-md'>
+              <div
+                class='bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'
+              >
+                <svg
+                  class='h-8 w-8 text-primary-600'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
+                  ></path>
                 </svg>
               </div>
-              <h3 class="font-bold text-neutral-800 mb-2">Assurance RC Pro</h3>
-              <p class="text-sm text-neutral-600">Couverture 2M€ responsabilité civile professionnelle</p>
+              <h3 class='font-bold text-neutral-800 mb-2'>Assurance RC Pro</h3>
+              <p class='text-sm text-neutral-600'>
+                Couverture 2M€ responsabilité civile professionnelle
+              </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={400}>
-            <div class="bg-white rounded-lg p-6 text-center shadow-md">
-              <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="h-8 w-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            <div class='bg-white rounded-lg p-6 text-center shadow-md'>
+              <div
+                class='bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'
+              >
+                <svg
+                  class='h-8 w-8 text-primary-600'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+                  ></path>
                 </svg>
               </div>
-              <h3 class="font-bold text-neutral-800 mb-2">Normes NF EN</h3>
-              <p class="text-sm text-neutral-600">Respect des normes européennes en géotechnique</p>
+              <h3 class='font-bold text-neutral-800 mb-2'>Normes NF EN</h3>
+              <p class='text-sm text-neutral-600'>
+                Respect des normes européennes en géotechnique
+              </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={500}>
-            <div class="bg-white rounded-lg p-6 text-center shadow-md">
-              <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="h-8 w-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            <div class='bg-white rounded-lg p-6 text-center shadow-md'>
+              <div
+                class='bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'
+              >
+                <svg
+                  class='h-8 w-8 text-primary-600'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+                  ></path>
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'></path>
                 </svg>
               </div>
-              <h3 class="font-bold text-neutral-800 mb-2">Zone d'intervention</h3>
-              <p class="text-sm text-neutral-600">Vendée (85) et Loire-Atlantique (44)</p>
+              <h3 class='font-bold text-neutral-800 mb-2'>
+                Zone d'intervention
+              </h3>
+              <p class='text-sm text-neutral-600'>
+                Vendée (85) et Loire-Atlantique (44)
+              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -283,20 +390,28 @@ const entrepriseJsonLd = {
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-secondary-500 to-secondary-600">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+    <section class='py-20 bg-gradient-to-r from-secondary-500 to-secondary-600'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <h2 class='text-3xl lg:text-4xl font-bold text-white mb-6'>
           Faites confiance à notre expertise
         </h2>
-        <p class="text-xl text-accent-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Contactez GeoTerra dès aujourd'hui pour bénéficier d'un accompagnement personnalisé
-          dans la réalisation de votre étude géotechnique.
+        <p
+          class='text-xl text-accent-100 mb-8 max-w-2xl mx-auto leading-relaxed'
+        >
+          Contactez GeoTerra dès aujourd'hui pour bénéficier d'un accompagnement
+          personnalisé dans la réalisation de votre étude géotechnique.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-100 transition-colors">
+        <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+          <a
+            href='/contact'
+            class='bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-100 transition-colors'
+          >
             Nous contacter
           </a>
-          <a href="/services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors">
+          <a
+            href='/services'
+            class='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-accent-600 transition-colors'
+          >
             Découvrir nos services
           </a>
         </div>
