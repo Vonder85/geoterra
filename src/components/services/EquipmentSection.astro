@@ -1,5 +1,5 @@
 ---
-import EquipmentItem from './EquipmentItem.astro';
+import EquipmentItem from "./EquipmentItem.astro";
 
 export interface Props {
   title?: string;
@@ -8,53 +8,62 @@ export interface Props {
 
 // Configuration des équipements
 const items = [
-    {
-        title: "Machine PAGANI TG-63",
-        description: "Forage haute précision",
-        iconSrc: "/icons/machine.svg",
-        iconAlt: "Machine PAGANI",
-        colorClass: "accent"
-    },
-    {
-        title: "Pénétromètres",
-        description: "Dynamiques et statiques",
-        icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-        colorClass: "accent"
-    },
-    {
-        title: "Tarière thermique",
-        description: "Prélèvement d'échantillons",
-        iconSrc: "/icons/tariere-1.svg",
-        iconAlt: "Tarière mécanique",
-        colorClass: "accent"
-    },
-    {
-        title: "Laser de précision",
-        description: "Nivellement laser",
-        iconSrc: "/icons/laser.svg",
-        iconAlt: "Laser de précision",
-        colorClass: "accent"
-    }
+  {
+    title: "Machine PAGANI TG-63",
+    description: "Forage haute précision",
+    iconSrc: "/icons/machine.svg",
+    iconAlt: "Machine PAGANI",
+    colorClass: "accent",
+  },
+  {
+    title: "Pénétromètres",
+    description: "Dynamiques et statiques",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+    colorClass: "accent",
+  },
+  {
+    title: "Tarière mécanique",
+    description: "Prélèvement d'échantillons",
+    iconSrc: "/icons/tariere-1.svg",
+    iconAlt: "Tarière mécanique",
+    colorClass: "accent",
+  },
+  {
+    title: "Laser de précision",
+    description: "Nivellement laser",
+    iconSrc: "/icons/laser.svg",
+    iconAlt: "Laser de précision",
+    colorClass: "accent",
+  },
 ];
 
 const {
   title = "Équipements utilisés",
-  className = "bg-white p-8 rounded-lg shadow-lg border-2 border-accent-200"
+  className = "bg-white p-8 rounded-lg shadow-lg border-2 border-accent-200",
 } = Astro.props;
 ---
 
 <div class={className}>
-  <h4 class="text-xl font-bold text-neutral-800 mb-4">{title}</h4>
-  <div class="space-y-4">
-    {items.map((item) => (
-      <EquipmentItem
-        title={item.title}
-        description={item.description}
-        icon={item.icon}
-        iconSrc={item.iconSrc}
-        iconAlt={item.iconAlt}
-        colorClass={(item.colorClass as "primary" | "accent" | "secondary" | "neutral" | undefined)  || 'accent'}
-      />
-    ))}
+  <h4 class='text-xl font-bold text-neutral-800 mb-4'>{title}</h4>
+  <div class='space-y-4'>
+    {
+      items.map((item) => (
+        <EquipmentItem
+          title={item.title}
+          description={item.description}
+          icon={item.icon}
+          iconSrc={item.iconSrc}
+          iconAlt={item.iconAlt}
+          colorClass={
+            (item.colorClass as
+              | "primary"
+              | "accent"
+              | "secondary"
+              | "neutral"
+              | undefined) || "accent"
+          }
+        />
+      ))
+    }
   </div>
 </div>
