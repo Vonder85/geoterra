@@ -6,6 +6,9 @@ export interface Props {
 }
 
 const { title, description = "GEOTERRA - Bureau d'étude géotechnique, situé en Vendée, expert en analyse de sols et fondations", keywords = "géotechnique, étude de sol, fondations, bureau d'étude, Vendée, Loire Atlantique, rénovation, BTP, argile, étude" } = Astro.props;
+
+const SITE_URL = 'https://be-geoterra.fr';
+const logoUrl = `${SITE_URL}/logo.png`;
 ---
 
 <!doctype html>
@@ -24,14 +27,14 @@ const { title, description = "GEOTERRA - Bureau d'étude géotechnique, situé e
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/logo.png" />
+    <meta property="og:image" content={logoUrl} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/logo.png" />
+    <meta property="twitter:image" content={logoUrl} />
 
     <title>{title}</title>
   </head>
