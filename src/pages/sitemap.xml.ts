@@ -1,33 +1,33 @@
 import type { APIRoute } from 'astro';
 
-const SITE_URL = 'https://geoterra.fr';
+const SITE_URL = "https://be-geoterra.fr";
 
 // Configuration des pages avec priorités et fréquences de mise à jour
 const pages = [
   {
-    url: '',
-    changefreq: 'weekly',
+    url: "",
+    changefreq: "monthly",
     priority: 1.0,
-    lastmod: new Date().toISOString()
+    lastmod: new Date().toISOString(),
   },
   {
-    url: 'services',
-    changefreq: 'monthly',
+    url: "services",
+    changefreq: "monthly",
     priority: 0.9,
-    lastmod: new Date().toISOString()
+    lastmod: new Date().toISOString(),
   },
   {
-    url: 'entreprise',
-    changefreq: 'monthly',
+    url: "entreprise",
+    changefreq: "monthly",
     priority: 0.8,
-    lastmod: new Date().toISOString()
+    lastmod: new Date().toISOString(),
   },
   {
-    url: 'contact',
-    changefreq: 'monthly',
+    url: "contact",
+    changefreq: "monthly",
     priority: 0.7,
-    lastmod: new Date().toISOString()
-  }
+    lastmod: new Date().toISOString(),
+  },
 ];
 
 export const GET: APIRoute = () => {

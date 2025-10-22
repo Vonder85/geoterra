@@ -3,40 +3,161 @@ export interface Props {
   title: string;
   description?: string;
   keywords?: string;
+  author?: string;
+  ogType?: string;
+  jsonLd?: object;
 }
 
-const { title, description = "GEOTERRA - Bureau d'étude géotechnique, situé en Vendée, expert en analyse de sols et fondations", keywords = "géotechnique, étude de sol, fondations, bureau d'étude, Vendée, Loire Atlantique, rénovation, BTP, argile, étude" } = Astro.props;
+const {
+  title,
+  description = "GEOTERRA - Bureau d'étude géotechnique, situé en Vendée, expert en analyse de sols et fondations",
+  keywords = "géotechnique, étude de sol, fondations, bureau d'étude, Vendée, Loire Atlantique, rénovation, BTP, argile, étude",
+  author = "GEOTERRA",
+  ogType = "website",
+  jsonLd
+} = Astro.props;
 
-const SITE_URL = 'https://be-geoterra.fr';
+const SITE_URL = 'https://geoterra.fr';
 const logoUrl = `${SITE_URL}/logo.png`;
+const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
+
+// Schema.org JSON-LD par défaut pour LocalBusiness
+const defaultJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "GEOTERRA",
+  "description": "Bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs en Vendée et Loire-Atlantique",
+  "url": SITE_URL,
+  "logo": logoUrl,
+  "image": logoUrl,
+  "telephone": "+33 2 51 25 78 90",
+  "email": "contact@geoterra.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zone d'activité",
+    "addressLocality": "Vendée",
+    "addressRegion": "Pays de la Loire",
+    "postalCode": "85000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.6703,
+    "longitude": -1.4269
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Vendée"
+    },
+    {
+      "@type": "State",
+      "name": "Loire-Atlantique"
+    }
+  ],
+  "priceRange": "€€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Vincent Menuet",
+      "jobTitle": "Gérant"
+    },
+    {
+      "@type": "Person",
+      "name": "Maxime Robin",
+      "jobTitle": "Gérant"
+    }
+  ],
+  "sameAs": [
+    SITE_URL
+  ],
+  "knowsAbout": [
+    "Géotechnique",
+    "Étude de sol",
+    "Fondations",
+    "Étude G1",
+    "Étude G2",
+    "Construction maison individuelle"
+  ]
+};
+
+const finalJsonLd = jsonLd || defaultJsonLd;
+const jsonLdArray = Array.isArray(finalJsonLd) ? finalJsonLd : [finalJsonLd];
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-      <meta name="google-site-verification" content="iUFJyQvRQy-xC97ZLoOhV88z0RQJd2EZv2bBr3wiAwg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="copyright" content="GEOTERRA" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Favicon and Icons -->
     <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/logo.png" as="image" type="image/png" />
+
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="iUFJyQvRQy-xC97ZLoOhV88z0RQJd2EZv2bBr3wiAwg" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="GEOTERRA" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={logoUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="GEOTERRA - Bureau d'études géotechniques" />
+    <meta property="og:locale" content="fr_FR" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={logoUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={logoUrl} />
+    <meta name="twitter:image:alt" content="GEOTERRA - Bureau d'études géotechniques" />
 
-    <title>{title}</title>
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="FR-85" />
+    <meta name="geo.region" content="FR-44" />
+    <meta name="geo.placename" content="Vendée" />
+    <meta name="geo.placename" content="Loire-Atlantique" />
+    <meta name="geo.position" content="46.6703;-1.4269" />
+    <meta name="ICBM" content="46.6703, -1.4269" />
+
+    <!-- JSON-LD Structured Data -->
+    {jsonLdArray.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />
+    ))}
+
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body class="min-h-screen bg-white">
     <slot />

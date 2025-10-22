@@ -5,9 +5,68 @@ import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import EngagementCard from '../components/contact/EngagementCard.astro';
 import ScrollReveal from '../components/ScrollReveal.astro';
+
+const entrepriseJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "GEOTERRA",
+    "description": "Bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs",
+    "foundingDate": "2025-05",
+    "url": "https://geoterra.fr",
+    "telephone": "+33686082100",
+    "email": "contact@be-geoterra.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vendée",
+      "addressRegion": "Pays de la Loire",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Vendée"
+      },
+      {
+        "@type": "State",
+        "name": "Loire-Atlantique"
+      }
+    ],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Vincent Menuet",
+        "jobTitle": "Ingénieur géotechnicien - Gérant",
+        "email": "vmenuet@be-geoterra.fr",
+        "telephone": "+33686156546",
+        "alumniOf": "École d'ingénieurs",
+        "yearsOfExperience": "25"
+      },
+      {
+        "@type": "Person",
+        "name": "Maxime Robin",
+        "jobTitle": "Géotechnicien spécialisé - Gérant",
+        "email": "mrobin@be-geoterra.fr",
+        "telephone": "+33686082100",
+        "yearsOfExperience": "5"
+      }
+    ],
+    "slogan": "Votre partenaire en géotechnique en Vendée et Loire-Atlantique",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.6703,
+        "longitude": -1.4269
+      },
+      "geoRadius": "100000"
+    }
+  }
+};
 ---
 
-<Layout title="L'entreprise - GeoTerra" description="Découvrez GeoTerra, bureau d'étude géotechnique fondé par des ingénieurs passionnés. Notre expertise et notre approche personnalisée garantissent la réussite de vos projets de construction." keywords="bureau d'étude géotechnique, entreprise, équipe, expertise, ingénieurs">
+<Layout title="L'entreprise - GeoTerra" description="Découvrez GeoTerra, bureau d'étude géotechnique fondé par des ingénieurs passionnés. Notre expertise et notre approche personnalisée garantissent la réussite de vos projets de construction." keywords="bureau d'étude géotechnique, entreprise, équipe, expertise, ingénieurs" jsonLd={entrepriseJsonLd}>
   <Header />
 
   <main>
