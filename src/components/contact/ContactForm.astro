@@ -170,9 +170,9 @@ const timelineOptions = [
   import emailjs from '@emailjs/browser';
 
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const submitButton = document.getElementById("submit-button");
-    const formMessage = document.getElementById("form-message");
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const submitButton = document.getElementById("submit-button") as HTMLButtonElement;
+    const formMessage = document.getElementById("form-message") as HTMLDivElement;
 
     if (!form) return;
 
@@ -193,6 +193,7 @@ const timelineOptions = [
         // Récupérer les données du formulaire
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
+
 
         // Préparer les paramètres pour EmailJS
         const templateParams = {
