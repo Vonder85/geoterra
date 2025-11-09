@@ -6,71 +6,91 @@ import Hero from "../components/Hero.astro";
 import EngagementCard from "../components/contact/EngagementCard.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 
-const entrepriseJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  mainEntity: {
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    name: "GEOTERRA",
-    description:
-      "Bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs",
-    foundingDate: "2025-05",
-    url: "https://be-geoterra.fr",
-    telephone: "+33686082100",
-    email: "contact@be-geoterra.fr",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Vendée",
-      addressRegion: "Pays de la Loire",
-      addressCountry: "FR",
-    },
-    areaServed: [
-      {
-        "@type": "State",
-        name: "Vendée",
+const entrepriseJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    mainEntity: {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      name: "GEOTERRA",
+      description:
+        "Bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs",
+      foundingDate: "2025-05",
+      url: "https://be-geoterra.fr",
+      telephone: "+33686082100",
+      email: "contact@be-geoterra.fr",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Vendée",
+        addressRegion: "Pays de la Loire",
+        addressCountry: "FR",
       },
-      {
-        "@type": "State",
-        name: "Loire-Atlantique",
+      areaServed: [
+        {
+          "@type": "State",
+          name: "Vendée",
+        },
+        {
+          "@type": "State",
+          name: "Loire-Atlantique",
+        },
+      ],
+      employee: [
+        {
+          "@type": "Person",
+          name: "Vincent Menuet",
+          jobTitle: "Ingénieur géotechnicien - Gérant",
+          email: "vmenuet@be-geoterra.fr",
+          telephone: "+33686156546",
+          alumniOf: "École d'ingénieurs",
+          yearsOfExperience: "25",
+        },
+        {
+          "@type": "Person",
+          name: "Maxime Robin",
+          jobTitle: "Géotechnicien spécialisé - Gérant",
+          email: "mrobin@be-geoterra.fr",
+          telephone: "+33686082100",
+          yearsOfExperience: "5",
+        },
+      ],
+      slogan: "Votre partenaire en géotechnique en Vendée et Loire-Atlantique",
+      serviceArea: {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: 46.6703,
+          longitude: -1.4269,
+        },
+        geoRadius: "100000",
       },
-    ],
-    employee: [
-      {
-        "@type": "Person",
-        name: "Vincent Menuet",
-        jobTitle: "Ingénieur géotechnicien - Gérant",
-        email: "vmenuet@be-geoterra.fr",
-        telephone: "+33686156546",
-        alumniOf: "École d'ingénieurs",
-        yearsOfExperience: "25",
-      },
-      {
-        "@type": "Person",
-        name: "Maxime Robin",
-        jobTitle: "Géotechnicien spécialisé - Gérant",
-        email: "mrobin@be-geoterra.fr",
-        telephone: "+33686082100",
-        yearsOfExperience: "5",
-      },
-    ],
-    slogan: "Votre partenaire en géotechnique en Vendée et Loire-Atlantique",
-    serviceArea: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: 46.6703,
-        longitude: -1.4269,
-      },
-      geoRadius: "100000",
     },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://be-geoterra.fr",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "L'entreprise",
+        item: "https://be-geoterra.fr/entreprise",
+      },
+    ],
+  },
+];
 ---
 
 <Layout
-  title="L'entreprise - GeoTerra"
-  description="Découvrez GeoTerra, bureau d'étude géotechnique fondé par des ingénieurs passionnés. Notre expertise et notre approche personnalisée garantissent la réussite de vos projets de construction."
-  keywords="bureau d'étude géotechnique, entreprise, équipe, expertise, ingénieurs"
+  title="L'entreprise GEOTERRA - Bureau d'étude géotechnique Vendée 85 Loire-Atlantique 44"
+  description="Découvrez GEOTERRA, bureau d'étude géotechnique fondé par des ingénieurs passionnés en Vendée et Loire-Atlantique. 25 ans d'expertise locale, réactivité garantie. Notre approche personnalisée garantit la réussite de vos projets de construction."
+  keywords="bureau d'étude géotechnique, bureau etude geotechnique, geo-technique, geo technique, entreprise géotechnique, entreprise geotechnique, équipe, expertise, ingénieurs, ingenieur geotechnique, ingénieur géotechnique, géotechnicien, geotechnicien, Vincent Menuet, Maxime Robin, Vendée, Vendee, Loire-Atlantique, Loire Atlantique, 85, 44, expertise locale, bureau etudes sols, bureau d'études sols"
   jsonLd={entrepriseJsonLd}
 >
   <Header />

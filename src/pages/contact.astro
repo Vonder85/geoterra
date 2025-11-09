@@ -54,6 +54,24 @@ const contactJsonLd = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://be-geoterra.fr",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact",
+        item: "https://be-geoterra.fr/contact",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
@@ -102,9 +120,9 @@ const contactJsonLd = [
 ---
 
 <Layout
-  title='Contact - GEOTERRA'
-  description='Contactez GEOTERRA pour vos études géotechniques en Vendée et Loire-Atlantique. Devis sous 48h, rapport sous 10 jours. Maison individuelle et petits collectifs.'
-  keywords="contact, devis géotechnique, bureau d'étude, géotechnique, étude de sol, Vendée, Loire-Atlantique"
+  title='Contact - Devis gratuit étude géotechnique Vendée 85 Loire-Atlantique 44'
+  description='Contactez GEOTERRA pour vos études géotechniques en Vendée et Loire-Atlantique. Devis gratuit sous 48h, rapport sous 10 jours. Maison individuelle et petits collectifs.'
+  keywords="contact, devis géotechnique, devis geotechnique, devis gratuit, bureau d'étude, bureau etude, géotechnique, geotechnique, geo-technique, geo technique, étude de sol, etude de sol, etude du sol, analyse sol, analyse de sol, Vendée, Vendee, Loire-Atlantique, Loire Atlantique, 85, 44, contact géotechnicien, géotechnicien Vendée, geotechnicien vendee, demande devis, demande de devis, étude G1, etude G1, étude G2, etude G2"
   jsonLd={contactJsonLd}
 >
   <Header />

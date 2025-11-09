@@ -7,65 +7,88 @@ import Methodology from "../components/services/Methodology.astro";
 import MissionsSection from "../components/services/MissionsSection.astro";
 import DetailedMissionsSection from "../components/services/DetailedMissionsSection.astro";
 
-const servicesJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Services géotechniques GEOTERRA",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "GEOTERRA",
-    url: "https://be-geoterra.fr",
+const servicesJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Services géotechniques GEOTERRA",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "GEOTERRA",
+      url: "https://be-geoterra.fr",
+    },
+    areaServed: [
+      {
+        "@type": "State",
+        name: "Vendée",
+      },
+      {
+        "@type": "State",
+        name: "Loire-Atlantique",
+      },
+    ],
+    serviceType: "Études géotechniques",
+    description:
+      "GEOTERRA propose des études géotechniques complètes pour la maison individuelle et les petits collectifs : études G1, G2, G5, missions d'investigation et dimensionnement de fondations.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services géotechniques",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Étude géotechnique G1",
+            alternateName: ["Étude de sol G1", "Analyse de sol G1", "Reconnaissance géotechnique G1"],
+            description: "Étude préalable pour évaluer la faisabilité du projet et identifier les risques géotechniques du terrain",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Étude géotechnique G2",
+            alternateName: ["Étude de sol G2", "Analyse des sols G2", "Dimensionnement fondations"],
+            description: "Étude de conception pour dimensionner précisément les fondations de votre construction",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Étude géotechnique G5",
+            alternateName: ["Étude de sol G5", "Diagnostic géotechnique", "Expertise sol existant"],
+            description: "Diagnostic géotechnique d'un bâtiment existant pour identifier les pathologies",
+          },
+        },
+      ],
+    },
   },
-  areaServed: [
-    {
-      "@type": "State",
-      name: "Vendée",
-    },
-    {
-      "@type": "State",
-      name: "Loire-Atlantique",
-    },
-  ],
-  serviceType: "Études géotechniques",
-  description:
-    "GEOTERRA propose des études géotechniques complètes pour la maison individuelle et les petits collectifs : études G1, G2, G5, missions d'investigation et dimensionnement de fondations.",
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Services géotechniques",
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: [
       {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Étude géotechnique G1",
-          description: "Étude préalable pour évaluer la faisabilité du projet",
-        },
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://be-geoterra.fr",
       },
       {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Étude géotechnique G2",
-          description: "Étude de conception pour dimensionner les fondations",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Étude géotechnique G5",
-          description: "Diagnostic géotechnique d'un bâtiment existant",
-        },
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://be-geoterra.fr/services",
       },
     ],
   },
-};
+];
 ---
 
 <Layout
-  title='Nos services - GeoTerra'
-  description="Découvrez tous nos services géotechniques : étude G1, G2, G5, missions d'investigation. Expertise et méthodologie rigoureuse pour tous vos projets."
-  keywords='services géotechniques, étude G1, G2, G5, fondations, sondages'
+  title='Nos services géotechniques - Études de sol G1 G2 G5 - GeoTerra'
+  description="Découvrez tous nos services géotechniques : étude G1, G2, G5, missions d'investigation, analyse de sol, dimensionnement de fondations. Expertise et méthodologie rigoureuse pour tous vos projets en Vendée et Loire-Atlantique."
+  keywords='services géotechniques, services geotechniques, geo-technique, geo technique, étude G1, etude G1, étude G2, etude G2, étude G5, etude G5, fondations, fondation, sondages, sondage, analyse sol, analyse de sol, analyse du sol, étude des sols, reconnaissance sol, reconnaissance de sol, dimensionnement fondations, étude géotechnique préalable, investigation géotechnique, investigation geotechnique, essais sol, essai sol, mission géotechnique, mission geotechnique'
   jsonLd={servicesJsonLd}
 >
   <Header />

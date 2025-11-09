@@ -7,12 +7,28 @@ import ExpertiseSection from "../components/home/ExpertiseSection.astro";
 import MissionsHomeSection from "../components/home/MissionsHomeSection.astro";
 import InterventionZoneSection from "../components/home/InterventionZoneSection.astro";
 import CTASection from "../components/home/CTASection.astro";
+
+const homeJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://be-geoterra.fr",
+      },
+    ],
+  },
+];
 ---
 
 <Layout
   title="GEOTERRA - Bureau d'étude géotechnique Vendée Loire-Atlantique"
   description="GEOTERRA, bureau d'études géotechniques spécialisé dans la maison individuelle et petits collectifs en Vendée (85) et Loire-Atlantique (44). Devis sous 48h, rapport sous 10 jours."
-  keywords='bureau étude géotechnique, Vendée, Loire-Atlantique, étude sol G1, G2, fondations, Vincent Menuet, Maxime Robin'
+  keywords='bureau étude géotechnique, bureau etude geotechnique, geo-technique, geo technique, étude sol, etude sol, etude de sol, étude des sols, analyse sol, analyse de sol, analyse du sol, Vendée, Vendee, Loire-Atlantique, Loire Atlantique, étude G1, etude G1, étude G2, etude G2, G5, fondations, fondation, reconnaissance sol, sondage geotechnique, sondage géotechnique, géotechnicien Vendée, geotechnicien vendee, Vincent Menuet, Maxime Robin, maison individuelle, construction, terrain, dimensionnement fondations'
+  jsonLd={homeJsonLd}
 >
   <Header />
 
