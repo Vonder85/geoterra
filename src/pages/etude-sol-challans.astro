@@ -1,0 +1,652 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CTASection from "../components/home/CTASection.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+
+const challansJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Étude de sol à Challans",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "GEOTERRA",
+      "url": "https://be-geoterra.fr",
+      "telephone": "+33 2 51 25 78 90",
+      "email": "contact@geoterra.fr"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Challans",
+      "containedIn": {
+        "@type": "State",
+        "name": "Vendée"
+      }
+    },
+    "serviceType": "Étude géotechnique",
+    "description": "Étude de sol G1, G2 et G5 à Challans (85300) - Bureau d'études géotechniques expert pour votre projet de construction"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pourquoi réaliser une étude de sol à Challans ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une étude de sol à Challans est obligatoire pour toute construction neuve depuis la loi ELAN. Elle permet d'analyser la nature du terrain, identifier les risques géotechniques (retrait-gonflement des argiles, remblais) et dimensionner correctement vos fondations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps dure une étude de sol à Challans ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'intervention sur site à Challans dure généralement 1 journée. Le rapport d'étude géotechnique est ensuite délivré sous 10 jours ouvrés maximum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les risques géotechniques à Challans ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "À Challans (85300), les principaux risques concernent la présence d'argiles sensibles au retrait-gonflement, les remblais et la nature hétérogène des sols. Une étude de sol approfondie permet de caractériser précisément ces risques."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://be-geoterra.fr"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Étude de sol Challans",
+        "item": "https://be-geoterra.fr/etude-sol-challans"
+      }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Étude de Sol à Challans (85300) | Bureau Géotechnique Expert Vendée | GEOTERRA"
+  description="Étude de sol à Challans ✓ Bureau d'études géotechniques certifié ✓ Études G1, G2, G5 ✓ Devis sous 48h ✓ Rapport sous 10 jours ✓ Expert construction maison individuelle et lotissement à Challans 85300"
+  keywords="étude de sol Challans, étude géotechnique Challans, étude sol Challans 85300, bureau étude sol Challans, géotechnicien Challans, étude G1 Challans, étude G2 Challans, étude G5 Challans, analyse sol Challans, reconnaissance sol Challans, sondage géotechnique Challans, fondations Challans, étude terrain Challans, construction Challans, maison individuelle Challans, terrain constructible Challans, sol argileux Challans, étude avant-vente Challans, étude conception Challans, mission géotechnique Challans, géotechnique Vendée, bureau d'étude Challans, diagnostic sol Challans, investigation géotechnique Challans, essai sol Challans, dimensionnement fondations Challans, retrait gonflement argiles Challans, sol Challans, terrain Challans, construction neuve Challans, permis construire Challans, vente terrain Challans, assurance dommages ouvrage Challans, loi ELAN Challans, étude obligatoire Challans, vendeur terrain Challans, acheteur terrain Challans, projet construction Challans, bâtiment Challans, maçonnerie Challans, Vendée 85"
+  jsonLd={challansJsonLd}
+>
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-700 via-primary-600 to-primary-700 text-white py-20 overflow-hidden">
+      <div class="absolute inset-0 opacity-10"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Étude de Sol à Challans (85300)<br />
+            <span class="text-accent-300">Bureau Géotechnique Expert en Vendée</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-primary-50">
+            Étude géotechnique G1, G2 et G5 à Challans • Devis sous 48h • Rapport sous 10 jours
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Demander un Devis Gratuit
+            </a>
+            <a href="tel:+33686082100" class="inline-block bg-white hover:bg-primary-100 text-primary-700 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              06 86 08 21 00
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction SEO-rich -->
+    <section class="py-16 bg-primary-50">
+      <div class="container mx-auto pb-4 sm:px-6 lg:px-8">
+        <ScrollReveal direction="up" delay={100}>
+          <div class="max-w-4xl mx-auto prose prose-lg">
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-6">
+              Votre Expert en Étude de Sol à Challans
+            </h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+              <strong>GEOTERRA</strong>, bureau d'études géotechniques implanté en Vendée, réalise votre <strong>étude de sol à Challans (85300)</strong> et dans toute l'agglomération challandaise. Que vous soyez particulier, constructeur, promoteur ou architecte, nous intervenons pour tous vos projets de <strong>construction de maison individuelle</strong>, <strong>lotissement</strong>, <strong>extension</strong> ou <strong>rénovation avec fondations</strong> sur le territoire de Challans.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+              Notre équipe de <strong>géotechniciens certifiés</strong> réalise des <strong>études géotechniques complètes</strong> : <strong>étude G1 PGC</strong> (étude préalable avant-vente), <strong>étude G2 AVP et PRO</strong> (étude de conception et dimensionnement des fondations), <strong>étude G5</strong> (diagnostic géotechnique après sinistre). Chaque <strong>étude de sol à Challans</strong> comprend des <strong>sondages géotechniques</strong>, des <strong>essais en laboratoire</strong> et un <strong>rapport détaillé</strong> avec recommandations techniques.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Depuis la <strong>loi ELAN</strong>, l'<strong>étude géotechnique est obligatoire</strong> pour toute vente de <strong>terrain constructible à Challans</strong> situé en zone d'exposition au phénomène de <strong>retrait-gonflement des argiles</strong>. GEOTERRA vous accompagne dans cette démarche essentielle pour sécuriser votre projet de construction.
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+
+    <!-- Pourquoi faire une étude de sol à Challans -->
+    <section class="py-16 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <ScrollReveal direction="up" delay={0}>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-8 text-center">
+              Pourquoi Réaliser une Étude Géotechnique à Challans ?
+            </h2>
+          </ScrollReveal>
+          <div class="grid md:grid-cols-2 gap-8">
+            <ScrollReveal direction="left" delay={100}>
+              <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-accent-500">
+                <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                  🏗️ Obligation Légale
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  L'<strong>étude de sol G1 est obligatoire à Challans</strong> pour le vendeur d'un terrain constructible, conformément à la <strong>loi ELAN</strong>. L'acquéreur doit ensuite faire réaliser une <strong>étude G2</strong> avant construction. Ces études géotechniques sont indispensables pour obtenir votre <strong>permis de construire</strong> et votre <strong>assurance dommages-ouvrage</strong>.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={100}>
+              <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-accent-500">
+                <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                  ⚠️ Risques Géotechniques Locaux
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  À <strong>Challans (85300)</strong>, les sols présentent des caractéristiques variables : présence d'<strong>argiles sensibles</strong> au retrait-gonflement, sols remblayés, nappes phréatiques fluctuantes. Une <strong>étude de sol approfondie</strong> identifie ces risques et permet d'adapter les <strong>fondations</strong> de votre construction.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="left" delay={200}>
+              <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-accent-500">
+                <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                  💰 Économies sur les Fondations
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Une <strong>étude géotechnique précise à Challans</strong> permet un <strong>dimensionnement optimal des fondations</strong>. Vous évitez le sur-dimensionnement coûteux ou le sous-dimensionnement dangereux. L'investissement dans l'<strong>étude de sol</strong> est rapidement rentabilisé par les économies réalisées sur les travaux de <strong>fondations</strong> et de <strong>terrassement</strong>.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={200}>
+              <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-accent-500">
+                <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                  🛡️ Protection de Votre Patrimoine
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  L'<strong>étude de sol sécurise votre projet de construction à Challans</strong> en prévenant les désordres futurs : fissures, affaissements, infiltrations d'eau. Elle protège votre investissement et garantit la pérennité de votre <strong>maison individuelle</strong> ou <strong>bâtiment</strong> sur le long terme.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types d'études à Challans -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <ScrollReveal direction="up" delay={0}>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-8 text-center">
+              Nos Études de Sol à Challans (85300)
+            </h2>
+          </ScrollReveal>
+          <div class="space-y-8">
+            <!-- Étude G1 -->
+            <ScrollReveal direction="up" delay={100}>
+              <div class="bg-gradient-to-r from-primary-50 to-white p-8 rounded-lg shadow-lg border border-primary-200">
+              <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                📋 Étude de Sol G1 PGC à Challans - Étude Géotechnique Préalable
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                L'<strong>étude G1 PGC (Principes Généraux de Construction) à Challans</strong> est l'<strong>étude géotechnique préalable obligatoire</strong> pour le vendeur d'un <strong>terrain constructible</strong>. Cette <strong>étude de sol avant-vente</strong> comprend :
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4 ml-4">
+                <li><strong>Recherche documentaire</strong> sur le contexte géologique et géotechnique de Challans</li>
+                <li><strong>Reconnaissance des sols</strong> par sondages à la tarière ou pénétromètre</li>
+                <li><strong>Identification des risques géotechniques majeurs</strong> : argiles, remblais, nappe phréatique</li>
+                <li><strong>Recommandations générales</strong> sur les types de fondations envisageables</li>
+                <li><strong>Classification du terrain</strong> selon son aptitude à la construction</li>
+              </ul>
+              <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
+                <p class="text-sm text-yellow-800">
+                  ⚡ <strong>Obligation légale</strong> : L'étude G1 doit être annexée à la promesse de vente du terrain à Challans (loi ELAN, article 68).
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <!-- Étude G2 -->
+            <ScrollReveal direction="up" delay={200}>
+              <div class="bg-gradient-to-r from-accent-50 to-white p-8 rounded-lg shadow-lg border border-accent-200">
+              <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                🏗️ Étude de Sol G2 à Challans - Conception et Dimensionnement
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                L'<strong>étude G2 à Challans</strong> est l'<strong>étude géotechnique de conception</strong> obligatoire avant construction. Elle se décompose en deux phases :
+              </p>
+
+              <h4 class="text-xl font-bold text-neutral-700 mb-3 mt-6">
+                Phase G2 AVP (Avant-Projet) à Challans
+              </h4>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4 ml-4">
+                <li><strong>Sondages géotechniques approfondis</strong> avec prélèvements d'échantillons</li>
+                <li><strong>Essais en laboratoire</strong> : identification, cisaillement, œdomètre, limites d'Atterberg</li>
+                <li><strong>Analyse de la portance du sol</strong> et de sa déformabilité</li>
+                <li><strong>Étude du niveau de la nappe phréatique</strong> et des circulations d'eau</li>
+                <li><strong>Principes généraux de fondations</strong> adaptés à votre projet à Challans</li>
+              </ul>
+
+              <h4 class="text-xl font-bold text-neutral-700 mb-3 mt-6">
+                Phase G2 PRO (Projet) à Challans
+              </h4>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4 ml-4">
+                <li><strong>Dimensionnement précis des fondations</strong> : semelles isolées, filantes, radier, pieux</li>
+                <li><strong>Calculs géotechniques détaillés</strong> selon les normes Eurocodes</li>
+                <li><strong>Prescriptions techniques</strong> pour les travaux de terrassement et fondations</li>
+                <li><strong>Recommandations sur les matériaux</strong> de remblai et de drainage</li>
+                <li><strong>Plans et coupes géotechniques</strong> annotés pour l'architecte et le constructeur</li>
+              </ul>
+
+              <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                <p class="text-sm text-blue-800">
+                  ✅ <strong>Indispensable</strong> : L'étude G2 est exigée par les assureurs dommages-ouvrage et les constructeurs pour tout projet de construction à Challans.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <!-- Étude G5 -->
+            <ScrollReveal direction="up" delay={300}>
+              <div class="bg-gradient-to-r from-secondary-50 to-white p-8 rounded-lg shadow-lg border border-secondary-200">
+              <h3 class="text-2xl font-bold text-neutral-800 mb-4">
+                🔍 Étude de Sol G5 à Challans - Diagnostic Géotechnique
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                L'<strong>étude G5 à Challans</strong> est une <strong>mission de diagnostic géotechnique</strong> réalisée en cas de sinistre ou désordre sur une construction existante. Elle permet de :
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4 ml-4">
+                <li><strong>Diagnostiquer l'origine des désordres</strong> : fissures, affaissements, infiltrations</li>
+                <li><strong>Caractériser les sols sous la construction</strong> à Challans</li>
+                <li><strong>Identifier les causes géotechniques</strong> du sinistre : tassement différentiel, retrait-gonflement argiles</li>
+                <li><strong>Préconiser des solutions de réparation</strong> et de confortement adaptées</li>
+              </ul>
+              <p class="text-gray-700 leading-relaxed">
+                L'<strong>étude G5</strong> est souvent demandée par les experts d'assurance, les tribunaux ou les propriétaires confrontés à des problèmes structurels sur leur bâtiment à Challans.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Déroulement étude de sol -->
+    <section class="py-16 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <ScrollReveal direction="down" delay={0}>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-8 text-center">
+              Comment se Déroule une Étude de Sol à Challans ?
+            </h2>
+          </ScrollReveal>
+          <div class="space-y-6">
+            <ScrollReveal direction="left" delay={50}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 bg-accent-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                    1
+                  </div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">
+                      Demande de Devis pour votre Étude de Sol à Challans
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Contactez <strong>GEOTERRA</strong> par téléphone (06 86 08 21 00) ou via notre formulaire en ligne. Nous vous envoyons un <strong>devis détaillé sous 48h</strong> pour votre <strong>étude géotechnique à Challans</strong>, en précisant le type d'étude (G1, G2 AVP, G2 PRO), le nombre de sondages et le délai d'intervention.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={100}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 bg-accent-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                    2
+                  </div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">
+                      Planification de l'Intervention sur votre Terrain à Challans
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Après acceptation du devis, nous planifions l'intervention de notre équipe de <strong>géotechniciens à Challans</strong>. Nous réalisons les démarches administratives nécessaires : DICT (Déclaration d'Intention de Commencement de Travaux) pour localiser les réseaux enterrés, demande d'autorisation d'accès si nécessaire.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left" delay={150}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 bg-accent-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                    3
+                  </div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">
+                      Investigations Géotechniques sur le Terrain à Challans
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Notre équipe intervient sur votre terrain à <strong>Challans (85300)</strong> avec du matériel professionnel : tarière mécanique, pénétromètre dynamique, mini-pelle. Nous réalisons des <strong>sondages géotechniques</strong> à différentes profondeurs (généralement 4 à 6 mètres), prélevons des échantillons de sol et effectuons des mesures in situ. Durée d'intervention : 1 journée en moyenne.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={200}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 bg-accent-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                    4
+                  </div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">
+                      Essais en Laboratoire et Analyses Géotechniques
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Les échantillons prélevés à <strong>Challans</strong> sont analysés en laboratoire géotechnique : essais d'identification (granulométrie, teneur en eau), essais mécaniques (cisaillement, œdomètre), essais de plasticité. Ces <strong>essais géotechniques</strong> permettent de déterminer les caractéristiques mécaniques des sols de votre terrain.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left" delay={250}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 bg-accent-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                    5
+                  </div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">
+                      Remise du Rapport d'Étude de Sol à Challans
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Nous vous remettons un <strong>rapport d'étude géotechnique complet sous 10 jours ouvrés</strong> comprenant : contexte géologique de Challans, résultats des sondages et essais, coupes géotechniques, analyse des risques, <strong>recommandations pour les fondations</strong>, plans et annexes techniques. Le rapport est envoyé par email (PDF) et par courrier postal si souhaité.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={300}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 bg-accent-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
+                    6
+                  </div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">
+                      Accompagnement et Suivi de votre Projet à Challans
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Nos <strong>ingénieurs géotechniciens</strong> restent à votre disposition pour expliquer le rapport, échanger avec votre architecte ou constructeur, et assurer le suivi géotechnique de votre projet de construction à <strong>Challans</strong>. Nous pouvons également réaliser des missions complémentaires si nécessaire (supervision des travaux de fondations, adaptation suite à modification de projet).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone d'intervention Challans -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-8 text-center">
+            Intervention à Challans et Communes Environnantes
+          </h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+              <strong>GEOTERRA</strong> intervient pour vos <strong>études de sol à Challans (85300)</strong> et dans toutes les communes de l'agglomération Challans Gois Communauté : Saint-Christophe-du-Ligneron, Soullans, Sallertaine, Saint-Gervais, La Garnache, Saint-Urbain, Froidfond, Commequiers, Saint-Révérend, Notre-Dame-de-Riez, Saint-Jean-de-Monts. Nous réalisons également des <strong>études géotechniques</strong> sur tout le territoire de la <strong>Vendée (85)</strong> et en <strong>Loire-Atlantique (44)</strong>.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+              La ville de <strong>Challans</strong>, située au cœur du marais breton vendéen, présente une géologie diversifiée avec des sols alluviaux, des argiles, des remblais et des zones marécageuses anciennes. La connaissance approfondie du contexte géologique local par nos <strong>géotechniciens</strong> est un atout majeur pour réaliser des <strong>études de sol précises et adaptées</strong> aux spécificités de votre terrain à Challans.
+            </p>
+            <div class="bg-primary-50 border border-primary-200 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-neutral-800 mb-4">
+                🗺️ Secteurs d'intervention autour de Challans
+              </h3>
+              <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                <ul class="space-y-2">
+                  <li>✓ Challans centre-ville et périphérie</li>
+                  <li>✓ Zone Actilonne Challans</li>
+                  <li>✓ Quartiers résidentiels de Challans</li>
+                  <li>✓ Lotissements neufs à Challans</li>
+                  <li>✓ Terrains agricoles constructibles</li>
+                </ul>
+                <ul class="space-y-2">
+                  <li>✓ Saint-Christophe-du-Ligneron</li>
+                  <li>✓ Soullans et alentours</li>
+                  <li>✓ Sallertaine et marais breton</li>
+                  <li>✓ La Garnache et communes voisines</li>
+                  <li>✓ Saint-Jean-de-Monts secteur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SEO -->
+    <section class="py-16 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <ScrollReveal direction="up" delay={0}>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-8 text-center">
+              Questions Fréquentes sur l'Étude de Sol à Challans
+            </h2>
+          </ScrollReveal>
+          <div class="space-y-6">
+            <ScrollReveal direction="up" delay={50}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Quelle est la durée de validité d'une étude de sol à Challans ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Une <strong>étude G1</strong> est généralement valable 30 ans si les conditions du terrain n'ont pas changé. Une <strong>étude G2</strong> est spécifique au projet de construction et doit être réalisée pour chaque nouveau projet. Si vous modifiez votre projet de construction à Challans, l'étude G2 devra être mise à jour ou refaite.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={100}>
+              <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Qui doit payer l'étude de sol à Challans : vendeur ou acheteur ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Pour un <strong>terrain à vendre à Challans</strong>, l'<strong>étude G1 est à la charge du vendeur</strong> (obligation légale loi ELAN). L'<strong>étude G2 est à la charge de l'acheteur</strong> qui construit, car elle est spécifique à son projet de construction. GEOTERRA peut accompagner aussi bien les vendeurs que les acheteurs de terrains à Challans.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Puis-je construire sans étude de sol à Challans ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Non</strong>. Depuis la loi ELAN, l'<strong>étude géotechnique est obligatoire à Challans</strong> pour toute construction neuve en zone argileuse (retrait-gonflement). Sans étude de sol, vous ne pourrez pas obtenir votre <strong>assurance dommages-ouvrage</strong> et vous vous exposez à des risques de sinistres importants (fissures, affaissements) non couverts par les assurances.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Quels sont les délais pour une étude de sol à Challans ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>GEOTERRA</strong> s'engage sur des <strong>délais courts</strong> : devis sous 48h, intervention sur site à Challans sous 1 à 2 semaines selon disponibilités, <strong>rapport d'étude remis sous 10 jours ouvrés</strong> après l'intervention terrain. Pour les projets urgents, nous pouvons adapter nos plannings.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Combien de sondages sont nécessaires pour un terrain à Challans ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Le nombre de <strong>sondages géotechniques</strong> dépend de la superficie du terrain et de l'hétérogénéité des sols. Pour une <strong>maison individuelle à Challans</strong>, on réalise généralement 2 à 4 sondages. Pour un <strong>lotissement</strong> ou un <strong>petit collectif</strong>, le nombre est augmenté (1 sondage tous les 500 à 1000 m²). Notre <strong>géotechnicien</strong> adapte le programme de reconnaissance à votre projet.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                L'étude de sol peut-elle rendre un terrain inconstructible à Challans ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                C'est très rare. Une <strong>étude géotechnique à Challans</strong> peut révéler des contraintes géotechniques importantes (sols très compressibles, remblais hétérogènes, nappe affleurante), mais il existe presque toujours des solutions techniques pour adapter les <strong>fondations</strong> : pieux, micropieux, radier nervuré, traitement de sol. Le coût des fondations peut être plus élevé, mais le terrain reste généralement constructible.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Puis-je utiliser une étude de sol du voisin pour mon terrain à Challans ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Non</strong>. Chaque <strong>étude de sol est spécifique à un terrain</strong> et ne peut pas être transposée au terrain voisin, même sur la même rue à Challans. Les caractéristiques géotechniques du sol peuvent varier fortement sur quelques mètres. Une étude géotechnique doit impérativement être réalisée sur votre propre parcelle.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent-500">
+              <h3 class="text-xl font-bold text-neutral-800 mb-3">
+                Que faire si mon terrain à Challans présente des risques géotechniques ?
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Si votre <strong>étude de sol à Challans</strong> révèle des risques (argiles gonflantes, remblais, nappe), ne vous inquiétez pas. Notre <strong>rapport géotechnique</strong> inclut systématiquement des <strong>recommandations techniques précises</strong> : type de fondations adapté, profondeur d'ancrage, dispositions constructives, drainage. Votre architecte et constructeur pourront concevoir des fondations appropriées pour sécuriser votre construction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages GEOTERRA -->
+    <section class="py-16 bg-gradient-to-br from-primary-700 to-primary-600 text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <ScrollReveal direction="down" delay={0}>
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+              Pourquoi Choisir GEOTERRA pour votre Étude de Sol à Challans ?
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={100} duration={1000}>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 border border-white/20">
+              <div class="text-4xl mb-4">🎓</div>
+              <h3 class="text-xl font-bold mb-3">Expertise Locale</h3>
+              <p class="text-primary-50">
+                Parfaite connaissance de la <strong>géologie de Challans</strong> et de la Vendée. Nos géotechniciens maîtrisent les spécificités des sols locaux.
+              </p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+              <div class="text-4xl mb-4">⚡</div>
+              <h3 class="text-xl font-bold mb-3">Réactivité</h3>
+              <p class="text-primary-50">
+                <strong>Devis sous 48h</strong>, intervention rapide à Challans, <strong>rapport sous 10 jours</strong>. Service client réactif et disponible.
+              </p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+              <div class="text-4xl mb-4">🔬</div>
+              <h3 class="text-xl font-bold mb-3">Matériel Performant</h3>
+              <p class="text-primary-50">
+                Équipement géotechnique moderne : tarière motorisée, pénétromètre, préleveurs d'échantillons, laboratoire partenaire certifié.
+              </p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+              <div class="text-4xl mb-4">📋</div>
+              <h3 class="text-xl font-bold mb-3">Rapports Détaillés</h3>
+              <p class="text-primary-50">
+                Rapports géotechniques complets, clairs et exploitables par vos architectes et constructeurs. Plans et coupes annotés.
+              </p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+              <div class="text-4xl mb-4">💰</div>
+              <h3 class="text-xl font-bold mb-3">Prix Transparent</h3>
+              <p class="text-primary-50">
+                <strong>Tarifs compétitifs</strong> pour vos études de sol à Challans. Devis détaillé sans surprise. Excellent rapport qualité/prix.
+              </p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+              <div class="text-4xl mb-4">🤝</div>
+              <h3 class="text-xl font-bold mb-3">Accompagnement</h3>
+              <p class="text-primary-50">
+                Suivi personnalisé de votre projet à Challans. Échanges avec architectes et constructeurs. Conseils techniques tout au long du projet.
+              </p>
+            </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Besoin d'une Étude de Sol à Challans (85300) ?
+        </h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto text-accent-50">
+          Contactez <strong>GEOTERRA</strong>, votre bureau d'études géotechniques expert en Vendée.<br />
+          Devis gratuit sous 48h • Intervention rapide • Rapport sous 10 jours
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-block bg-white hover:bg-primary-100 text-accent-600 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl text-lg">
+            Demander un Devis Gratuit
+          </a>
+          <a href="tel:+33686082100" class="inline-block bg-primary-700 hover:bg-primary-800 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl text-lg">
+            06 86 08 21 00
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-accent-100">
+          Du lundi au vendredi, de 8h à 18h • Intervention dans toute la Vendée et Loire-Atlantique
+        </p>
+      </div>
+    </section>
+
+    <!-- Derniers mots-clés SEO -->
+    <section class="py-8 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+          <p class="text-sm text-gray-600 leading-relaxed">
+            <strong>Étude de sol Challans</strong> • <strong>Étude géotechnique Challans 85300</strong> • <strong>Bureau d'étude géotechnique Vendée</strong> • <strong>Géotechnicien Challans</strong> • <strong>Étude G1 G2 G5 Challans</strong> • <strong>Sondage géotechnique Challans</strong> • <strong>Analyse sol Challans</strong> • <strong>Reconnaissance de sol Challans</strong> • <strong>Fondations maison Challans</strong> • <strong>Étude terrain constructible Challans</strong> • <strong>Étude avant vente terrain Challans</strong> • <strong>Construction maison individuelle Challans</strong> • <strong>Lotissement Challans</strong> • <strong>Sol argileux Challans</strong> • <strong>Retrait gonflement argiles Challans</strong> • <strong>Dimensionnement fondations Challans</strong> • <strong>Mission géotechnique Challans</strong> • <strong>Investigation géotechnique Challans</strong> • <strong>Essai de sol Challans</strong> • <strong>Diagnostic sol Challans</strong> • <strong>GEOTERRA Vendée</strong> • <strong>Bureau étude sol 85</strong> • <strong>Expert géotechnique Vendée</strong> • <strong>Étude obligatoire terrain Challans</strong> • <strong>Loi ELAN Challans</strong> • <strong>Permis de construire Challans</strong> • <strong>Assurance dommages ouvrage Challans</strong> • <strong>Prix étude sol Challans</strong> • <strong>Tarif étude géotechnique Challans</strong> • <strong>Devis étude sol Challans</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    @apply text-neutral-800 font-bold mt-8 mb-4;
+  }
+  .prose h3 {
+    @apply text-neutral-700 font-bold mt-6 mb-3;
+  }
+  .prose p {
+    @apply mb-4;
+  }
+  .prose ul, .prose ol {
+    @apply mb-4;
+  }
+  .prose strong {
+    @apply text-neutral-800 font-semibold;
+  }
+</style>

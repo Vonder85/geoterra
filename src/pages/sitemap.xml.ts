@@ -28,6 +28,12 @@ const pages = [
     priority: 0.7,
     lastmod: new Date().toISOString(),
   },
+    {
+        url: "etude-sol-challans",
+        changefreq: "monthly",
+        priority: 0.4,
+        lastmod: new Date().toISOString(),
+    },
 ];
 
 export const GET: APIRoute = () => {
