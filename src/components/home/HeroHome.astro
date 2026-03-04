@@ -6,10 +6,13 @@
   <!-- Background Image -->
   <div class='absolute inset-0 z-0'>
     <img
-      src='/image/background.png'
+      src='/image/background.webp'
       alt="GEOTERRA - Bureau d'études géotechniques"
       class='w-full h-full object-cover'
       loading='eager'
+      fetchpriority='high'
+      width='1248'
+      height='832'
       onerror="console.error('Image failed to load:', this.src); this.style.backgroundColor='red';"
     />
     <div

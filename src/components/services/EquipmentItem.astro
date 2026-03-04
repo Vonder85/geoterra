@@ -23,7 +23,7 @@ const iconColorClass = colorClasses[colorClass];
 <div class="flex items-center">
   <div class={`${iconColorClass.split(' ')[0]} p-2 rounded-full mr-4`}>
     {iconSrc ? (
-      <img class="h-6 w-6" src={iconSrc} alt={iconAlt || title} />
+      <img class="h-6 w-6" src={iconSrc} alt={iconAlt || title} width='24' height='24' loading='lazy' />
     ) : (
       <svg class={`h-6 w-6 ${iconColorClass.split(' ')[1]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}/>

@@ -133,10 +133,7 @@ const jsonLdArray = Array.isArray(finalJsonLd) ? finalJsonLd : [finalJsonLd];
     <link rel='manifest' href='/site.webmanifest' />
 
     <!-- Preload critical resources -->
-    <link rel='preload' href={logoUrl} as='image' type='image/png' />
-
-    <!-- DNS Prefetch for external resources -->
-    <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+    <link rel='preload' href='/image/background.webp' as='image' type='image/webp' fetchpriority='high' />
 
     <!-- Google Site Verification -->
     <meta
@@ -190,9 +187,9 @@ const jsonLdArray = Array.isArray(finalJsonLd) ? finalJsonLd : [finalJsonLd];
     }
 
     <meta name='generator' content={Astro.generator} />
-    <Analytics />
   </head>
   <body class='min-h-screen bg-white'>
     <slot />
+    <Analytics />
   </body>
 </html>
